@@ -1,5 +1,4 @@
-$(document).ready(function () {
-	
+$(document).ready(function () {	
 	$("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
 		e.preventDefault();
         $('.ripple').remove();
@@ -30,3 +29,7 @@ $(document).ready(function () {
         }).addClass("ripple-active");
     })
 })
+
+(function ($) {
+    
+})(jQuery);
