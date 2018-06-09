@@ -1,6 +1,6 @@
-$(document).ready(function () {	
-	$("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
-		e.preventDefault();
+$(document).ready(function() {
+    $("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
+        e.preventDefault();
         $('.ripple').remove();
 
         var posX = $(this).offset().left,
@@ -28,8 +28,9 @@ $(document).ready(function () {
             left: x + 'px'
         }).addClass("ripple-active");
     })
+  
 })
 
-(function ($) {
-    
-})(jQuery);
+// (function ($) {
+
+// })(jQuery);

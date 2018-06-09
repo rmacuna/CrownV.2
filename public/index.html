@@ -6,19 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="grid/flexboxgrid.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/crown.css">
-    <title>CrownV.2</title>
+    <title>Crown</title>
+    <style type="text/css">
+    .cont {
+        width: 100px;
+        height: 400px;
+    }
+    </style>
 </head>
 
 <body>
     <div class="cr container">
-        <input class="cr input x-small" placeholder="Age" type="text" name="">
-        <input class="cr input small" placeholder="Email" type="text" name="">
-        <input class="cr input medium" type="text" placeholder="Name" name="">
-        <input class="cr input large" type="text" placeholder="Search " name="">
-        <input class="cr input big" placeholder="Big Data " type="text" name="">
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+               <div class="cr-material area with counter">
+                   <label class="m-label">Leave a comment</label>
+                   <textarea class="m-area"></textarea> 
+               </div>
+            </div>
+            <div class="col-md-6 col-xs-6">
+             
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Components/Inputs/crinputs.js"></script>
     <script src="javascript/crown.js"></script>
 </body>
 
