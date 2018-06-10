@@ -1,0 +1,469 @@
+$primary: #3F51B5 
+$secondary: #3D5AFE
+$accent: #E91E63
+$black: #000 
+$white: #fff
+$error: #B71C1C
+$gray: #9E9E9E
+$gray-2: #616161
+$yellow: #FFEB3B
+$blue: #2196F3
+$gold: #bf9b30
+$gold-deep: #a67c00
+$light-blue: #03A9F4
+$red: #F44336
+$red-1: #B71C1C
+$green: #00C853
+$royal-blue: #3D5AFE
+
+$intense-green: #1DE9B6
+$intense-purple: #9C27B0
+
+$orange: #FF9800
+$amber: #FFC107
+$light-green: #8BC34A
+$teal: #009688
+$cyan: #00BCD4 
+$indigo: #3F51B5 
+$deep-purple: #673AB7
+$pink: #E91E63
+$purple: #9C27B0 
+
+
+
+$input-tiny-size: 0 10px 
+$input-small-size: 3px 10px
+$input-medium-size: 5px 10px 
+$input-large-size: 8px 10px 
+$input-big-size: 10px 10px
+
+
+
+label 
+	padding-top: 5px 
+	position: relative 
+	display: inline-block
+
+
+
+div.cr.input 
+	position: relative 
+	font-weight: 500 
+	color: rgba(0,0,0,.8)
+	width: auto 
+	input 
+		margin: 2px 2px 
+		height: 32px
+		font-size: 14px
+		line-height: 1.2em
+		border-radius: 4px 
+		border: 1px solid $gray 
+		padding: 2px 15px 
+		font-family: 'Source Sans Pro', sans-serif
+		outline: none 
+		transition: border-color 0.4s ease-out, background 0.3s ease-out
+		&:focus 
+			border-color: lighten($royal-blue, 10)
+		&::placeholder
+			color: rgba(33,33,33,.5)
+			font-weight: bold 
+
+div.cr.input.tiny
+	font-size: 0.8em
+	input 
+		padding: $input-tiny-size
+		font-size: 0.95111em
+		padding-right: 1.399em !important
+		+ i 
+			padding: 8px 0
+
+div.cr.input.small 
+	font-size: 0.896em
+	input 
+		padding: $input-small-size 
+		padding-right: 1.2em
+		font-size: 0.96111em
+		+ i 
+			padding: 10px 0
+
+div.cr.input.medium 
+	font-size: 0.996em
+	input 
+		padding: $input-medium-size
+		padding-right: 1.599em !important
+		font-size: 1em
+		+ i
+			padding: 12px 8px !important
+div.cr.input.large 
+	font-size: 1.1em 
+	input 
+		padding: $input-large-size 
+		padding-right: 1.493em !important
+		font-size: 1.04em 
+		+ i 
+			padding: 15px 8px !important 
+div.cr.input.big  
+	font-size: 1.2em
+	input 
+		padding: $input-big-size 
+		font-size: 1.1em
+		padding-right: 1.593em !important
+		+ i
+			padding: 15px 8px !important
+		&::placeholder 
+			font-size: 1.1em
+
+div.cr.input.adaptable
+	max-width: 100%
+	width: 100% 
+	input
+		width: 100%
+		width: -moz-available
+		width: fill-available
+		width: -webkit-fill-available
+		max-width: 100%
+
+div.cr.input.transparent 
+	input 
+		background: none 
+		border: none 
+
+div.cr.input.for.dark.backgrounds 
+	input 
+		border-color: #fff 
+		color: #fff 
+		background: none 
+		&::placeholder 
+			color: darken(#fff, 5)
+		&:focus 
+			border-color: #fff 
+
+div.cr.input.error 
+	input 
+		background: lighten($error,50)
+		color: $error 
+		&:focus 
+			border-color: $error 
+		&::placeholder 
+			color: lighten($error, 30)
+
+div.cr.input.rounded 
+	input 
+		border-radius: 50px 
+
+div.cr.input.icon 
+	position: relative 
+	display: inline-block 
+	input 
+		+ i 
+			position: absolute
+			bottom: 0 
+			padding: 10px 5px 
+			right: 0 
+			font-size: 1.375em 
+
+div.cr.input.raised 
+	box-shadow: 0 2px 6px rgba(0,0,0,.3)
+	border-radius: 2px
+	input 
+		border: none 
+div.cr.input.raised.variant
+	box-shadow: 0 2px 4px rgba(0,0,0,.4)
+	border-radius: 2px
+	input 
+		border: none 
+
+div.cr.input.raised.hoverable 
+	box-shadow: 0 1px  1px 1px rgba(0,0,0,.3)
+	border-radius: 2px
+	transition: box-shadow 0.3s ease-out
+	input 
+		border: none 
+	&:hover 
+		box-shadow: 0 4px 8px rgba(0,0,0,.3)
+
+
+.cr-material
+	position: relative
+	padding: 5px 0 
+	width: 100% 
+	width: -webkit-fill-available
+	width: -moz-fill-available
+	width: fill-available
+	input 
+		position: relative 
+		height: 32px 
+		font-size: 16px 
+		font-family: 'Source Sans Pro', sans-serif
+		&:focus 
+			~ span.m-counter
+				&:before
+					display: inline-block 
+					visibility: visible
+
+
+.cr-material
+	&:after, &:before
+		content: ''
+		height: 1px 
+		width: 100%
+		width: -webkit-fill-available
+		width: -moz-fill-available
+		width: fill-available
+		background-color: hsl(0, 0%, 85%)
+		position: absolute
+		bottom: 6px
+		-webkit-transition: height 0.3s ease-out
+		-o-transition: height 0.3s ease-out
+		-moz-transition: height 0.3s ease-out
+		transition: height 0.3s ease-out 
+		left: 0 
+
+.cr-material
+	&:after 
+		background: $accent
+		-o-transform: scaleX(0)
+		-webkit-transform: scaleX(0)
+		-moz-transform: scaleX(0)
+		transform: scaleX(0)
+		-webkit-transition: transform 0.3s
+		-o-transition: transform 0.3s
+		-moz-transition: transform 0.3s
+		transition: transform 0.3s
+
+
+.is-focused .m-label
+	color: $accent
+
+.is-focused, .m-label
+	&:after
+		transform: scaleX(1)
+		height: 2px
+
+.has-label .m-label
+	transform: translateY(0) scale(0.75)
+
+.m-input
+	position: relative 
+	display: block 
+	width: 100%
+	width: -webkit-fill-available
+	width: -moz-fill-available
+	width: fill-available
+	padding-bottom: 0px
+	padding-top: 0px
+	padding-right: 0px
+	padding-left: 0px
+	font-family: 'Source Sans Pro', sans-serif
+	line-height: 16px
+	font-size: 16px
+	
+	background: transparent
+	outline: none 
+	border: none
+	-webkit-appearance: none 
+
+.m-area 
+	position: relative 
+	display: block 
+	width: 100%
+	width: -webkit-fill-available
+	width: -moz-fill-available
+	width: fill-available 
+	height: auto 
+	padding-bottom: 2px 
+	padding-top: 0 
+	padding-right: 0
+	padding-left: 0 
+	font-family: 'Source Sans Pro', sans-serif
+	line-height: 16px 
+	font-size: 16px 
+
+	background: transparent 
+	outline: none !important 
+	border: none 
+	-webkit-appearance: none 
+
+	resize: none 
+
+
+.m-label
+	position: relative 
+	margin: 0
+	color: rgba(33, 33, 33, 0.7)
+	white-space: nowrap
+	line-height: 16px
+	font-weight: 400px
+	font-size: 16px
+	display: block
+
+	transform: translateY(24px)
+
+	-webkit-transition: transform 0.3s, font-size 0.3s
+	-o-transition: transform 0.3s, font-size 0.3s
+	-moz-transition: transform 0.3s, font-size 0.3s
+	transition: transform 0.3s, font-size 0.3s
+
+	transform-origin: 0 50%
+
+
+.cr.material.simple
+	label 
+		display: none 
+	span.m-counter
+		&:before 
+			padding-top: 10px
+	span.m-state
+		&:before 
+			padding-top: 6px
+
+	input 
+		padding-top: 10px 
+		padding-left: 0
+		padding-bottom: 0 
+		
+.cr-material.area 
+	height: 130px
+	textarea
+		height: 100px !important
+		&:focus
+			~ span.m-counter
+				&:before
+					display: inline-block 
+					visibility: visible 
+
+	span
+		&:before 
+			padding-top: 10px !important
+
+.cr-material.area.with.counter 
+	span 
+		position: absolute
+		bottom: -1.41em 
+		right: 0 
+		padding: 8px 5px
+		font-size: 0.899em
+
+.count-overflow
+	color: $error 
+
+
+.cr-material.blue 
+	&:after 
+		background-color: $blue 
+.cr-material.blue.is-focused
+	label 
+		color: $blue
+	&:after 
+		background-color: $blue
+
+.cr-material.royal-blue 
+	&:after 
+		background-color: $royal-blue 
+.cr-material.royal-blue.is-focused
+	label 
+		color: $royal-blue
+	&:after 
+		background-color: $royal-blue
+
+.cr-material.green 
+	&:after 
+		background-color: $green 
+.cr-material.green.is-focused
+	label 
+		color: $green 
+	&:after 
+		background-color: $green
+
+.cr-material.red 
+	&:after 
+		background-color: $red 
+.cr-material.red.is-focused
+	label 
+		color: $red
+	&:after 
+		background-color: $red
+
+
+.cr-material.black 
+	&:after 
+		background-color: $black 
+.cr-material.black.is-focused
+	label 
+		color: $black
+	&:after 
+		background-color: $black
+
+
+.cr-material.white 
+	&:after 
+		background-color: $white 
+.cr-material.white.is-focused
+	label 
+		color: $white
+	&:after 
+		background-color: $white
+
+
+.cr-material.yellow 
+	&:after 
+		background-color: $yellow 
+.cr-material.yellow.is-focused
+	label 
+		color: $yellow
+	&:after 
+		background-color: $yellow
+
+.cr-material.orange 
+	&:after 
+		background-color: $orange 
+.cr-material.orange.is-focused
+	label 
+		color: $orange
+	&:after 
+		background-color: $orange
+
+.cr-material.amber 
+	&:after 
+		background-color: $amber 
+.cr-material.amber.is-focused
+	label 
+		color: $amber
+	&:after 
+		background-color: $amber
+
+.cr-material.indigo 
+	&:after 
+		background-color: $indigo 
+.cr-material.indigo.is-focused
+	label 
+		color: $indigo
+	&:after 
+		background-color: $indigo
+
+.cr-material.purple 
+	&:after 
+		background-color: $purple 
+.cr-material.purple.is-focused
+	label 
+		color: $purple
+	&:after 
+		background-color: $purple
+
+.cr-material.teal 
+	&:after 
+		background-color: $teal 
+.cr-material.teal.is-focused
+	label 
+		color: $teal
+	&:after 
+		background-color: $teal
+
+.cr-material.deep-purple 
+	&:after 
+		background-color: $deep-purple 
+.cr-material.deep-purple.is-focused
+	label 
+		color: $deep-purple
+	&:after 
+		background-color: $deep-purple

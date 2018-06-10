@@ -891,4 +891,108 @@ div.cr.input.raised.hoverable {
 .count-overflow {
   color: #B71C1C; }
 
+.cr-material.blue:after {
+  background-color: #2196F3; }
+
+.cr-material.blue.is-focused label {
+  color: #2196F3; }
+.cr-material.blue.is-focused:after {
+  background-color: #2196F3; }
+
+.cr-material.royal-blue:after {
+  background-color: #3D5AFE; }
+
+.cr-material.royal-blue.is-focused label {
+  color: #3D5AFE; }
+.cr-material.royal-blue.is-focused:after {
+  background-color: #3D5AFE; }
+
+.cr-material.green:after {
+  background-color: #00C853; }
+
+.cr-material.green.is-focused label {
+  color: #00C853; }
+.cr-material.green.is-focused:after {
+  background-color: #00C853; }
+
+.cr-material.red:after {
+  background-color: #F44336; }
+
+.cr-material.red.is-focused label {
+  color: #F44336; }
+.cr-material.red.is-focused:after {
+  background-color: #F44336; }
+
+.cr-material.black:after {
+  background-color: #000; }
+
+.cr-material.black.is-focused label {
+  color: #000; }
+.cr-material.black.is-focused:after {
+  background-color: #000; }
+
+.cr-material.white:after {
+  background-color: #fff; }
+
+.cr-material.white.is-focused label {
+  color: #fff; }
+.cr-material.white.is-focused:after {
+  background-color: #fff; }
+
+.cr-material.yellow:after {
+  background-color: #FFEB3B; }
+
+.cr-material.yellow.is-focused label {
+  color: #FFEB3B; }
+.cr-material.yellow.is-focused:after {
+  background-color: #FFEB3B; }
+
+.cr-material.orange:after {
+  background-color: #FF9800; }
+
+.cr-material.orange.is-focused label {
+  color: #FF9800; }
+.cr-material.orange.is-focused:after {
+  background-color: #FF9800; }
+
+.cr-material.amber:after {
+  background-color: #FFC107; }
+
+.cr-material.amber.is-focused label {
+  color: #FFC107; }
+.cr-material.amber.is-focused:after {
+  background-color: #FFC107; }
+
+.cr-material.indigo:after {
+  background-color: #3F51B5; }
+
+.cr-material.indigo.is-focused label {
+  color: #3F51B5; }
+.cr-material.indigo.is-focused:after {
+  background-color: #3F51B5; }
+
+.cr-material.purple:after {
+  background-color: #9C27B0; }
+
+.cr-material.purple.is-focused label {
+  color: #9C27B0; }
+.cr-material.purple.is-focused:after {
+  background-color: #9C27B0; }
+
+.cr-material.teal:after {
+  background-color: #009688; }
+
+.cr-material.teal.is-focused label {
+  color: #009688; }
+.cr-material.teal.is-focused:after {
+  background-color: #009688; }
+
+.cr-material.deep-purple:after {
+  background-color: #673AB7; }
+
+.cr-material.deep-purple.is-focused label {
+  color: #673AB7; }
+.cr-material.deep-purple.is-focused:after {
+  background-color: #673AB7; }
+
 /*# sourceMappingURL=crown.css.map */
