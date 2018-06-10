@@ -149,9 +149,6 @@ div.cr.input.raised.hoverable {
     height: 32px;
     font-size: 16px;
     font-family: "Source Sans Pro", sans-serif; }
-    .cr-material input:focus ~ span.m-counter:before {
-      display: inline-block;
-      visibility: visible; }
 
 .cr-material:after, .cr-material:before {
   content: "";
@@ -190,7 +187,7 @@ div.cr.input.raised.hoverable {
 .has-label .m-label {
   transform: translateY(0) scale(0.75); }
 
-.m-input {
+.cr-material .m-field {
   position: relative;
   display: block;
   width: 100%;
@@ -209,7 +206,7 @@ div.cr.input.raised.hoverable {
   border: none;
   -webkit-appearance: none; }
 
-.m-area {
+.cr-material.area .m-field {
   position: relative;
   display: block;
   width: 100%;
@@ -248,8 +245,6 @@ div.cr.input.raised.hoverable {
 
 .cr.material.simple label {
   display: none; }
-.cr.material.simple span.m-counter:before {
-  padding-top: 10px; }
 .cr.material.simple span.m-state:before {
   padding-top: 6px; }
 .cr.material.simple input {
@@ -261,13 +256,10 @@ div.cr.input.raised.hoverable {
   height: 130px; }
   .cr-material.area textarea {
     height: 100px !important; }
-    .cr-material.area textarea:focus ~ span.m-counter:before {
-      display: inline-block;
-      visibility: visible; }
   .cr-material.area span:before {
     padding-top: 10px !important; }
 
-.cr-material.area.with.counter span {
+.cr-material.with.counter span {
   position: absolute;
   bottom: -1.41em;
   right: 0;

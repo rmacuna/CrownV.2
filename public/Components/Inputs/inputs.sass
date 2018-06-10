@@ -1,6 +1,7 @@
 $primary: #3F51B5 
 $secondary: #3D5AFE
 $accent: #E91E63
+
 $black: #000 
 $white: #fff
 $error: #B71C1C
@@ -195,12 +196,6 @@ div.cr.input.raised.hoverable
 		height: 32px 
 		font-size: 16px 
 		font-family: 'Source Sans Pro', sans-serif
-		&:focus 
-			~ span.m-counter
-				&:before
-					display: inline-block 
-					visibility: visible
-
 
 .cr-material
 	&:after, &:before
@@ -243,48 +238,50 @@ div.cr.input.raised.hoverable
 .has-label .m-label
 	transform: translateY(0) scale(0.75)
 
-.m-input
-	position: relative 
-	display: block 
-	width: 100%
-	width: -webkit-fill-available
-	width: -moz-fill-available
-	width: fill-available
-	padding-bottom: 0px
-	padding-top: 0px
-	padding-right: 0px
-	padding-left: 0px
-	font-family: 'Source Sans Pro', sans-serif
-	line-height: 16px
-	font-size: 16px
+.cr-material
+	.m-field
+		position: relative 
+		display: block 
+		width: 100%
+		width: -webkit-fill-available
+		width: -moz-fill-available
+		width: fill-available
+		padding-bottom: 0px
+		padding-top: 0px
+		padding-right: 0px
+		padding-left: 0px
+		font-family: 'Source Sans Pro', sans-serif
+		line-height: 16px
+		font-size: 16px
 	
-	background: transparent
-	outline: none 
-	border: none
-	-webkit-appearance: none 
+		background: transparent
+		outline: none 
+		border: none
+		-webkit-appearance: none 
 
-.m-area 
-	position: relative 
-	display: block 
-	width: 100%
-	width: -webkit-fill-available
-	width: -moz-fill-available
-	width: fill-available 
-	height: auto 
-	padding-bottom: 2px 
-	padding-top: 0 
-	padding-right: 0
-	padding-left: 0 
-	font-family: 'Source Sans Pro', sans-serif
-	line-height: 16px 
-	font-size: 16px 
+.cr-material.area 
+	.m-field 
+		position: relative 
+		display: block 
+		width: 100%
+		width: -webkit-fill-available
+		width: -moz-fill-available
+		width: fill-available 
+		height: auto 
+		padding-bottom: 2px 
+		padding-top: 0 
+		padding-right: 0
+		padding-left: 0 
+		font-family: 'Source Sans Pro', sans-serif
+		line-height: 16px 
+		font-size: 16px 
 
-	background: transparent 
-	outline: none !important 
-	border: none 
-	-webkit-appearance: none 
+		background: transparent 
+		outline: none !important 
+		border: none 
+		-webkit-appearance: none 
 
-	resize: none 
+		resize: none 
 
 
 .m-label
@@ -310,13 +307,9 @@ div.cr.input.raised.hoverable
 .cr.material.simple
 	label 
 		display: none 
-	span.m-counter
-		&:before 
-			padding-top: 10px
 	span.m-state
 		&:before 
 			padding-top: 6px
-
 	input 
 		padding-top: 10px 
 		padding-left: 0
@@ -326,17 +319,11 @@ div.cr.input.raised.hoverable
 	height: 130px
 	textarea
 		height: 100px !important
-		&:focus
-			~ span.m-counter
-				&:before
-					display: inline-block 
-					visibility: visible 
-
 	span
 		&:before 
 			padding-top: 10px !important
 
-.cr-material.area.with.counter 
+.cr-material.with.counter 
 	span 
 		position: absolute
 		bottom: -1.41em 

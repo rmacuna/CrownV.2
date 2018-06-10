@@ -1,31 +1,19 @@
 $(document).ready(function() {
-    var arr = $('.cr-material.with.counter').children().eq(1)
-    arr.each(function(i, obj) {
-        if (!$(obj).next().is('span')) {
-            var elem = $("<span></span>")
-            elem.attr('maximum', '120')
-            elem.text($(obj).val().length + '/' + elem.attr('maximum'))
-            $(obj).after(elem)
+    var arr = $('.cr-material.with.counter > .m-field').toArray()
+    arr.forEach(function (elem, i ) {
+      if (!$(elem).next().is('span')) {
+            var span = $("<span></span>")
+            span.attr('maximum', '120')
+            span.text($(elem).val().length + '/' + span.attr('maximum'))
+            $(elem).after(span)
         } else {
-            $(obj).next().text($(obj).val().length + '/' + $(obj).next().attr('maximum'))
+            $(elem).next().text($(elem).val().length + '/' + $(elem).next().attr('maximum'))
         }
     })
-    $('.m-input, .m-area').focus(function() {
+    $('.m-field').focus(function() {
         $(this).parent().addClass('is-focused has-label');
-        if ($(this).parent().find('span.m-counter') != null) {
-            var parent = $(this).parent();
-            var input = $(this);
-            var counter = parent.find('span.m-counter');
-            if (counter != null) {
-                var valcount = input.val().length;
-                maxVal = counter.attr('max-value');
-                if (maxVal != null) {
-                    counter.attr('max-value', valcount + "/" + maxVal.replace(/['"]+/g, ''));
-                }
-            }
-        }
     })
-    $('.with.counter > .m-input, .m-area').on("input", function(e) {
+    $('.with.counter > .m-field').on("input", function(e) {
         var span = $(this).next();
         if (!$(this).parent().hasClass('words')) {
             if (span.attr('maximum').length != 0) {
@@ -37,9 +25,9 @@ $(document).ready(function() {
             } else if (span.hasClass('count-overflow')) {
                 span.removeClass('count-overflow')
             }
-        }else{
+        } else {
             if (span.attr('maximum').length != 0) {
-                var numberofwords = $(this).val().split(" ").filter(function(v){return v!== ''})
+                var numberofwords = $(this).val().split(" ").filter(function(v) { return v !== '' })
                 span.text(numberofwords.length + '/' + span.attr('maximum'))
             }
             var currentVal = span.text().split('/')[0];
@@ -51,20 +39,14 @@ $(document).ready(function() {
         }
 
     })
-    $('.m-input, .m-area').blur(function() {
-        var parent = $(this).parent();
-        var input = $(this);
-        var counter = parent.find('span.m-counter');
-        if (counter != null) { counter.attr('max-value', maxVal); }
-    })
-    $('.m-input, .m-area').blur(function() {
+    $('.m-field').blur(function() {
         var parent = $(this).parent();
         if ($(this).val() == '') {
             parent.removeClass('has-label');
         }
         parent.removeClass('is-focused');
     })
-    if ($('.m-input, .m-area').val().trim().length > 0) {
-        $('.m-input, .m-area').parent().addClass('is-focused has-label');
+    if ($('.m-field').val().trim().length > 0) {
+        $('.m-field').parent().addClass('is-focused has-label');
     }
 })
