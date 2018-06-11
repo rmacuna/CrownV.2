@@ -67,7 +67,6 @@ div.cr.button {
   font-family: "Source Sans Pro", sans-serif;
   text-align: center;
   font-size: 0.9rem;
-  font-weight: bold;
   margin: 2px 2px;
   -webkit-user-select: none;
   user-select: none;
@@ -84,30 +83,33 @@ div.cr.button {
   .cr.button:active {
     background: rgba(0, 0, 0, 0.2); }
 
+.cr.button .ripple {
+  background: #9E9E9E; }
+
 .cr.button.plain {
   border-radius: 0 !important; }
 
 .cr.button.rounded {
   border-radius: 50px; }
 
-.cr.button.x-small {
-  font-size: 12px;
+.cr.button.tiny {
+  font-size: 0.75em;
   padding: 6px 12px; }
 
 .cr.button.small {
-  font-size: 12px;
+  font-size: 0.75em;
   padding: 8px 18px; }
 
 .cr.button.medium {
-  font-size: 14px;
+  font-size: 0.875em;
   padding: 8px 24px; }
 
 .cr.button.large {
-  font-size: 16px;
+  font-size: 1em;
   padding: 10px 28px; }
 
 .cr.button.big {
-  font-size: 16px;
+  font-size: 1em;
   padding: 14px 30px; }
 
 .cr.button.adaptable {
@@ -140,6 +142,14 @@ div.cr.button {
     border-color: #fff; }
   .cr.button.outline.white .ripple {
     background: #9E9E9E; }
+
+.cr.button.outline.royal-blue {
+  background: none;
+  border: 1px solid #3D5AFE;
+  color: #3D5AFE; }
+  .cr.button.outline.royal-blue:hover {
+    background: #3D5AFE;
+    color: #fff; }
 
 .cr.button.outline.blue {
   background: none;
@@ -229,13 +239,25 @@ div.cr.button {
 .cr.button.blue {
   background: #2196F3;
   color: #fff; }
+  .cr.button.blue .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.blue:active {
     background: #0a6ebd; }
+
+.cr.button.royal-blue {
+  background: #3D5AFE;
+  color: #fff; }
+  .cr.button.royal-blue .ripple {
+    background: rgba(255, 255, 255, 0.8); }
+  .cr.button.royal-blue:active {
+    background: #0a2ffe; }
 
 .cr.button.white {
   background: #fff;
   border-radius: 1px;
   color: #1a1a1a; }
+  .cr.button.white:active {
+    background: #d9d9d9 !important; }
   .cr.button.white:hover {
     background: white; }
   .cr.button.white .ripple {
@@ -244,74 +266,100 @@ div.cr.button {
 .cr.button.deep-purple {
   background: #673AB7;
   color: #fff; }
+  .cr.button.deep-purple .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.deep-purple:active {
     background: #46287d; }
 
 .cr.button.gold {
   background: #bf9b30;
   color: #fff; }
+  .cr.button.gold .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.gold:active {
     background: #826921; }
 
 .cr.button.green {
   background: #00C853;
   color: #fff; }
+  .cr.button.green .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.green:active {
     background: #007c33; }
 
 .cr.button.red {
   background: #F44336;
   color: #fff; }
+  .cr.button.red .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.red:active {
     background: #d2190b; }
 
 .cr.button.orange {
   background: #FF9800;
   color: #fff; }
+  .cr.button.orange .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.orange:active {
     background: #b36a00; }
 
 .cr.button.pink {
   background: #E91E63;
   color: #fff; }
+  .cr.button.pink .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.pink:active {
     background: #aa1145; }
 
 .cr.button.light-blue {
   background: #03A9F4;
   color: #fff; }
+  .cr.button.light-blue .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.light-blue:active {
     background: #0275a8; }
 
 .cr.button.indigo {
   background: #3F51B5;
   color: #fff; }
+  .cr.button.indigo .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.indigo:active {
     background: #2b387c; }
 
 .cr.button.black {
   background: #000;
   color: #fff; }
+  .cr.button.black .ripple {
+    background: rgba(255, 255, 255, 0.8); }
 
 .cr.button.yellow {
   background: #FFEB3B;
   color: #000; }
+  .cr.button.yellow .ripple {
+    background: rgba(255, 255, 255, 0.8); }
 
 .cr.button.teal {
   background: #009688;
   color: #fff; }
+  .cr.button.teal .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.teal:active {
     background: #004a43; }
 
 .cr.button.amber {
   background: #FFC107;
   color: #fff; }
+  .cr.button.amber .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.amber:active {
     background: #ba8b00; }
 
 .cr.button.blue.hoverable {
   background: #2196F3;
   color: #fff; }
+  .cr.button.blue.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.blue.hoverable:hover {
     background: #0c82df; }
   .cr.button.blue.hoverable:active {
@@ -320,6 +368,8 @@ div.cr.button {
 .cr.button.deep-purple.hoverable {
   background: #673AB7;
   color: #fff; }
+  .cr.button.deep-purple.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.deep-purple.hoverable:hover {
     background: #563098; }
   .cr.button.deep-purple.hoverable:active {
@@ -328,6 +378,8 @@ div.cr.button {
 .cr.button.gold.hoverable {
   background: #bf9b30;
   color: #fff; }
+  .cr.button.gold.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.gold.hoverable:hover {
     background: #9e8128; }
   .cr.button.gold.hoverable:active {
@@ -336,6 +388,8 @@ div.cr.button {
 .cr.button.green.hoverable {
   background: #00C853;
   color: #fff; }
+  .cr.button.green.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.green.hoverable:hover {
     background: #009f42; }
   .cr.button.green.hoverable:active {
@@ -344,6 +398,8 @@ div.cr.button {
 .cr.button.red.hoverable {
   background: #F44336;
   color: #fff; }
+  .cr.button.red.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.red.hoverable:hover {
     background: #f21f0f; }
   .cr.button.red.hoverable:active {
@@ -352,6 +408,8 @@ div.cr.button {
 .cr.button.orange.hoverable {
   background: #FF9800;
   color: #fff; }
+  .cr.button.orange.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.orange.hoverable:hover {
     background: #d68000; }
   .cr.button.orange.hoverable:active {
@@ -360,6 +418,8 @@ div.cr.button {
 .cr.button.pink.hoverable {
   background: #E91E63;
   color: #fff; }
+  .cr.button.pink.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.pink.hoverable:hover {
     background: #d68000; }
   .cr.button.pink.hoverable:active {
@@ -368,6 +428,8 @@ div.cr.button {
 .cr.button.light-blue.hoverable {
   background: #03A9F4;
   color: #fff; }
+  .cr.button.light-blue.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.light-blue.hoverable:hover {
     background: #038dcc; }
   .cr.button.light-blue.hoverable:active {
@@ -376,6 +438,8 @@ div.cr.button {
 .cr.button.indigo.hoverable {
   background: #3F51B5;
   color: #fff; }
+  .cr.button.indigo.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.indigo.hoverable:hover {
     background: #344397; }
   .cr.button.indigo.hoverable:active {
@@ -384,10 +448,14 @@ div.cr.button {
 .cr.button.black.hoverable {
   background: #000;
   color: #fff; }
+  .cr.button.black.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
 
 .cr.button.teal.hoverable {
   background: #009688;
   color: #fff; }
+  .cr.button.teal.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.teal.hoverable:hover {
     background: #006d63; }
   .cr.button.teal.hoverable:active {
@@ -396,6 +464,8 @@ div.cr.button {
 .cr.button.amber.hoverable {
   background: #FFC107;
   color: #fff; }
+  .cr.button.amber.hoverable .ripple {
+    background: rgba(255, 255, 255, 0.8); }
   .cr.button.amber.hoverable:hover {
     background: #FFA000; }
   .cr.button.amber.hoverable:active {
@@ -414,10 +484,15 @@ div.cr.button {
   .cr.simple.button.blue .ripple {
     background: #2196F3; }
 
+.cr.simple.button.royal-blue {
+  color: #3D5AFE; }
+  .cr.simple.button.royal-blue .ripple {
+    background: #3D5AFE; }
+
 .cr.simple.button.white {
   color: #fff; }
   .cr.simple.button.white .ripple {
-    background: #fff; }
+    background: rgba(255, 255, 255, 0.8); }
   .cr.simple.button.white:active {
     background: none !important; }
 
@@ -619,7 +694,7 @@ label {
 
 div.cr.input {
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
   width: auto; }
   div.cr.input input {
@@ -637,7 +712,7 @@ div.cr.input {
       border-color: #7085fe; }
     div.cr.input input::placeholder {
       color: rgba(33, 33, 33, 0.5);
-      font-weight: bold; }
+      font-weight: 400; }
 
 div.cr.input.tiny {
   font-size: 0.8em; }
@@ -923,6 +998,10 @@ div.cr.input.raised.hoverable {
 .cr-material.black.is-focused:after {
   background-color: #000; }
 
+.cr-material.white input {
+  color: #fff; }
+.cr-material.white label {
+  color: #fff; }
 .cr-material.white:after {
   background-color: #fff; }
 

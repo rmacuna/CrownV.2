@@ -49,7 +49,7 @@ label
 
 div.cr.input 
 	position: relative 
-	font-weight: 500 
+	font-weight: 400 
 	color: rgba(0,0,0,.8)
 	width: auto 
 	input 
@@ -67,7 +67,7 @@ div.cr.input
 			border-color: lighten($royal-blue, 10)
 		&::placeholder
 			color: rgba(33,33,33,.5)
-			font-weight: bold 
+			font-weight: 400 
 
 div.cr.input.tiny
 	font-size: 0.8em
@@ -383,6 +383,10 @@ div.cr.input.raised.hoverable
 
 
 .cr-material.white 
+	input 
+		color: $white
+	label 
+		color: $white
 	&:after 
 		background-color: $white 
 .cr-material.white.is-focused

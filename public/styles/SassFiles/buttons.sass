@@ -20,9 +20,8 @@ $light-blue: #03A9F4
 $red: #F44336
 $red-1: #B71C1C
 $green: #00C853
+$royal-blue: #3D5AFE
 
-$intense-green: #1DE9B6
-$intense-purple: #9C27B0
 
 $orange: #FF9800
 $amber: #FFC107
@@ -63,8 +62,7 @@ div.cr.button
 	text-align: center 
 
 	font-size: 0.9rem
-	font-weight: bold
-	
+	// font-weight: 600
 	margin: 2px 2px 
 	-webkit-user-select: none 
 
@@ -84,6 +82,9 @@ div.cr.button
 	&:active 
 		background: rgba(0,0,0,0.2)
 
+.cr.button
+	.ripple 
+		background: $gray 
 
 .cr.button.plain
 	border-radius: 0 !important
@@ -91,24 +92,24 @@ div.cr.button
 .cr.button.rounded 
 	border-radius: 50px
 
-.cr.button.x-small
-	font-size: 12px
+.cr.button.tiny
+	font-size: 0.750em
 	padding: $button-xsmall-size
 
 .cr.button.small
-	font-size: 12px 
+	font-size: 0.750em
 	padding: $button-small-size
 
 .cr.button.medium
-	font-size: 14px
+	font-size: 0.875em
 	padding: $button-medium-size
 
 .cr.button.large 
-	font-size: 16px 
+	font-size: 1em 
 	padding: $button-large-size
 
 .cr.button.big 
-	font-size: 16px 
+	font-size: 1em
 	padding: $button-big-size 
 
 .cr.button.adaptable
@@ -144,6 +145,13 @@ div.cr.button
 	.ripple 
 		background: $gray
 
+.cr.button.outline.royal-blue
+	background: none 
+	border: 1px solid $royal-blue 
+	color: $royal-blue
+	&:hover 
+		background: $royal-blue
+		color: $white 
 
 .cr.button.outline.blue 
 	background: none
@@ -234,14 +242,25 @@ div.cr.button
 .cr.button.blue
 	background: $blue 
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active
 		background: darken($blue, 15)
 
+.cr.button.royal-blue
+	background: $royal-blue
+	color: $white 
+	.ripple 
+		background: rgba($white,.8)  
+	&:active 
+		background: darken($royal-blue, 10)
 
 .cr.button.white 
 	background: $white 
 	border-radius: 1px
 	color: lighten($black, 10)
+	&:active 
+		background: darken($white, 15) !important
 	&:hover 
 		background: darken($white, .1) 
 	.ripple 
@@ -250,75 +269,101 @@ div.cr.button
 .cr.button.deep-purple
 	background: $deep-purple
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active
 		background: darken($deep-purple, 15)
 
 .cr.button.gold
 	background: $gold
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active
 		background: darken($gold, 15)
 		
 .cr.button.green
 	background: $green 
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($green, 15) 
 
 .cr.button.red
 	background: $red
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($red, 15)
 
 .cr.button.orange
 	background: $orange
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($orange, 15)
 
 .cr.button.pink
 	background: $pink
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 	&:active
 		background: darken($pink, 15) 
 
 .cr.button.light-blue
 	background: $light-blue
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($light-blue, 15)
 
 .cr.button.indigo
 	background: $indigo
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($indigo, 15) 
 
 .cr.button.black
 	background: $black
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 
 .cr.button.yellow
 	background: $yellow
 	color: $black 
+	.ripple 
+		background: rgba($white, .8) 
 
 
 .cr.button.teal
 	background: $teal 
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($teal, 15) 
 
 .cr.button.amber 
 	background: $amber
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 	&:active 
 		background: darken($amber, 15)
 
 .cr.button.blue.hoverable
 	background: $blue 
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover
 		background: darken($blue, 8)
 	&:active
@@ -327,6 +372,8 @@ div.cr.button
 .cr.button.deep-purple.hoverable
 	background: $deep-purple
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover
 		background: darken($deep-purple, 8)
 	&:active
@@ -336,6 +383,8 @@ div.cr.button
 .cr.button.gold.hoverable
 	background: $gold
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($gold, 8)
 	&:active
@@ -345,6 +394,8 @@ div.cr.button
 .cr.button.green.hoverable
 	background: $green 
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover
 		background: darken($green, 8)
 	&:active 
@@ -353,6 +404,8 @@ div.cr.button
 .cr.button.red.hoverable
 	background: $red
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($red, 8)
 	&:active 
@@ -361,6 +414,8 @@ div.cr.button
 .cr.button.orange.hoverable
 	background: $orange
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($orange, 8)
 	&:active 
@@ -369,6 +424,8 @@ div.cr.button
 .cr.button.pink.hoverable
 	background: $pink
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($orange, 8) 
 	&:active
@@ -377,6 +434,8 @@ div.cr.button
 .cr.button.light-blue.hoverable
 	background: $light-blue
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($light-blue, 8)
 	&:active 
@@ -385,6 +444,8 @@ div.cr.button
 .cr.button.indigo.hoverable
 	background: $indigo
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($indigo, 8) 
 	&:active 
@@ -393,11 +454,15 @@ div.cr.button
 .cr.button.black.hoverable
 	background: $black
 	color: $white 
+	.ripple 
+		background: rgba($white, .8) 
 
 
 .cr.button.teal.hoverable
 	background: $teal 
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: darken($teal, 8) 
 	&:active 
@@ -406,6 +471,8 @@ div.cr.button
 .cr.button.amber.hoverable 
 	background: $amber
 	color: $white
+	.ripple 
+		background: rgba($white, .8) 
 	&:hover 
 		background: #FFA000 
 	&:active 
@@ -424,12 +491,15 @@ div.cr.button
 	color: $blue 
 	.ripple 
 		background: $blue
-
+.cr.simple.button.royal-blue
+	color: $royal-blue
+	.ripple 
+		background: $royal-blue
 
 .cr.simple.button.white 
 	color: $white 
 	.ripple
-		background: $white
+		background: rgba($white, .8)
 	&:active 
 		background: none !important 
 		
