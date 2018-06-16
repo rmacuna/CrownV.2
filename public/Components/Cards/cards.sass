@@ -25,6 +25,9 @@ $indigo: #3F51B5
 $deep-purple: #673AB7
 $pink: #E91E63
 $purple: #9C27B0 
+
+content 
+	display: block 
 .cr.card
 	position: relative
 	background: $white 
@@ -36,37 +39,63 @@ $purple: #9C27B0
 	-webkit-box-shadow: 0 2px 8px -2px rgba($black, .20)
 	box-shadow: 0 2px 8px -2px rgba($black, .20)
 	border-radius: 4px
-	div.header, div.body,div.footer
+	header,content,footer
 		position: relative 
 		padding: 10px 20px
 		background: none 
 		border: none
 		-webkit-box-flex: 1 
 		flex-grow: 1
-	div.header
+	header
 		border-top-left-radius: 4px
 		border-top-right-radius: 4px
+		display: flex
 		.title 
 			position: relative
-			font-size: 1.1em 
+			font-size: 1.1em
+			align-self: center 
 			font-weight: 600
 			flex-grow: 1
-	div.footer 
+		.right-item 
+			flex-wrap: nowrap
+			align-items: center 
+			-webkit-box-pack: center
+			-ms-flex-pack: center
+			justify-content: flex-end
+	footer 
 		border-bottom-left-radius: 4px
 		border-bottom-right-radius: 4px
 
-	div.header.with.separador
+	header.with.separador
 		border-bottom: 1px solid rgba(151,151,151,.2)
-	div.header.center,div.body.center,div.footer.center
+	header.center,content.center,footer.center
 		-webkit-box-pack: center
 		-ms-flex-pack: center
 		justify-content: center
-	div.header.right ,div.body.right,div.footer.right
+	header.right ,content.right,footer.right
 		-webkit-box-pack: end
 		justify-content: flex-end 
 		text-align: end
-	div.footer.with.separador
+	footer.with.separador
 		border-top: 1px solid rgba(151,151,151,.2)
+
+
+
+
+.image.container
+	position: relative 
+	display: block 
+	display: flex
+	width: 100% 
+	justify-content: center 
+	align-items: center
+	max-width: 100% 
+	flex: 0 0 auto 
+	img 
+		display: block 
+		width: 100% 
+		max-width: 100% 		
+
 
 .cr.card.adaptable
 	width: 100%
@@ -85,10 +114,10 @@ $purple: #9C27B0
 	-webkit-transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out
 	-o-transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out
 	transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out
-	div.header 
+	header
 		border-top-left-radius: 2px
 		border-top-right-radius: 2px
-	div.footer 
+	footer 
 		border-bottom-left-radius: 2px
 		border-bottom-right-radius: 2px
 	&:hover 
@@ -113,27 +142,64 @@ $purple: #9C27B0
 	-webkit-box-shadow: 0 2px 6px -2px rgba($black,.5)
 	box-shadow: 0 2px 6px -2px rgba($black,.5)
 .cr.card.mobile-2
-	background: none 
-	border: 1px solid rgba($black,.3)
-	-webkit-box-shadow: 0 1px 4px -1px rgba($black,.6)
-	box-shadow: 0 1px 4px -1px rgba($black,.6)
+	background: $white  
+	border: 1px solid rgba($black,.13)
+	-webkit-box-shadow: 0 1px 0 -1px rgba($black,.14)
+	box-shadow: 0 1px 0 -1px rgba($black,.14)
 
-div.cr.card.blue
-	background: $blue !important
-	color: $white 
-	.with.separador
-		border-color: $white
+ 
+.cr.card 
+	header.blue,content.blue,footer.blue 
+		background: $blue 
+		color: $white 
+	header.red,content.red,footer.red 
+		background: $red 
+		color: $white 
+	header.yellow,content.yellow,footer.yellow 
+		background: $yellow 
+		color: $black 
+	header.green,content.green,footer.green 
+		background: $green 
+		color: $white 
+	header.black,content.black,footer.black 
+		background: $black 
+		color: $white 
+	header.orange,content.orange,footer.orange 
+		background: $orange 
+		color: $white 
+	header.pink,content.pink,footer.pink 
+		background: $pink 
+		color: $white 
+	header.indigo,content.indigo,footer.indigo 
+		background: $indigo 
+		color: $white 
+	header.purple,content.purple,footer.purple 
+		background: $purple 
+		color: $white 
+	header.deep-purple,content.deep-purple,footer.deep-purple 
+		background: $deep-purple 
+		color: $white 
+	header.royal-blue,content.royal-blue,footer.royal-blue 
+		background: $royal-blue 
+		color: $white 
+	header.teal,content.teal,footer.teal 
+		background: $teal 
+		color: $white 
 
-div.cr.card.red 
-	background: $red !important
-	color: $white
-	.with.separador
-		border-color: $white 
-div.cr.card.green 
-	background: $green !important 
-	color: $white 
-	.with.separador
-		border-color: $white 
+.cr.card 
+	img.profile
+		position: relative
+		width: 2.188em
+		height: 2.188em
+		border: 1px solid rgba(151,151,151,.19)
+		border-radius: 50%
+		margin: 0 2px 0 -4px
+
+
+
+
+
+
 
 
 
