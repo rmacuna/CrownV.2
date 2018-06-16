@@ -1,11 +1,4 @@
-.cr.container {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  padding-right: 10px;
-  padding-left: 10px;
-  box-sizing: border-box; }
-
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
 body {
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -38,6 +31,14 @@ a.link {
     transform: scaleX(0); }
   a.link:hover:after {
     transform: scaleX(1); }
+
+.cr.container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-sizing: border-box; }
 
 button.cr.button {
   outline: none;
