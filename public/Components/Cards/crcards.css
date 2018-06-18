@@ -9,8 +9,8 @@ content {
   max-width: 100%;
   margin: 1em 0;
   border: 1px solid rgba(151, 151, 151, 0.2);
-  -webkit-box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
   border-radius: 4px; }
   .cr.card header, .cr.card content, .cr.card footer {
     position: relative;
@@ -22,12 +22,14 @@ content {
   .cr.card header {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .cr.card header .title {
       position: relative;
       font-size: 1.1em;
       align-self: center;
       font-weight: 600;
+      padding: 0 10px;
       flex-grow: 1; }
     .cr.card header .right-item {
       flex-wrap: nowrap;
@@ -40,14 +42,6 @@ content {
     border-bottom-right-radius: 4px; }
   .cr.card header.with.separador {
     border-bottom: 1px solid rgba(151, 151, 151, 0.2); }
-  .cr.card header.center, .cr.card content.center, .cr.card footer.center {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
-  .cr.card header.right, .cr.card content.right, .cr.card footer.right {
-    -webkit-box-pack: end;
-    justify-content: flex-end;
-    text-align: end; }
   .cr.card footer.with.separador {
     border-top: 1px solid rgba(151, 151, 151, 0.2); }
 
@@ -98,16 +92,16 @@ content {
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.3); }
 
 .cr.card.deep.shadow {
-  border-radius: 4px;
+  border-radius: 10px;
   border: none !important;
-  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); }
+  -webkit-box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.3); }
 
 .cr.card.variant {
   border-radius: 14px;
   border: 1px solid #e6e6e6;
-  -webkit-box-shadow: 0 6px -12px -6px rgba(0, 0, 0, 0.43);
-  box-shadow: 0 6px -12px -6 rgba(0, 0, 0, 0.43); }
+  -webkit-box-shadow: 0 6px -12px -3px rgba(0, 0, 0, 0.53);
+  box-shadow: 0 6px -12px -3px rgba(0, 0, 0, 0.53); }
 
 .cr.card.mobile {
   border-radius: 12px;
@@ -163,7 +157,26 @@ content {
   width: 2.188em;
   height: 2.188em;
   border: 1px solid rgba(151, 151, 151, 0.19);
-  border-radius: 50%;
-  margin: 0 2px 0 -4px; }
+  border-radius: 50%; }
+
+.cr.card .feature.container {
+  position: absolute;
+  background: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  opacity: 0;
+  z-index: 2;
+  overflow-y: auto;
+  transition: background 0.3s ease-out, opacity 0.3s ease-out; }
+  .cr.card .feature.container:hover {
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 1; }
+  .cr.card .feature.container content {
+    padding: 10px 10px;
+    font-size: 0.875em;
+    color: #fff; }
 
 /*# sourceMappingURL=crcards.css.map */

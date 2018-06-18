@@ -9,6 +9,30 @@ a {
   display: inline-block;
   font-size: 14px; }
 
+.center {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.right {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  text-align: end; }
+
+.middle {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 a.link {
   transition: transform 0.3s ease-out; }
   a.link:after {
@@ -255,7 +279,6 @@ div.cr.button {
 
 .cr.button.white {
   background: #fff;
-  border-radius: 1px;
   color: #1a1a1a; }
   .cr.button.white:active {
     background: #d9d9d9 !important; }
