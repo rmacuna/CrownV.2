@@ -52,6 +52,7 @@ div.cr.input
 	font-weight: 400 
 	color: rgba(0,0,0,.8)
 	width: auto 
+	padding: 0.5em 0  
 	input 
 		margin: 2px 2px 
 		height: 32px
@@ -205,7 +206,7 @@ div.cr.input.raised.hoverable
 		width: -webkit-fill-available
 		width: -moz-fill-available
 		width: fill-available
-		background-color: hsl(0, 0%, 85%)
+		background-color: hsl(0, 0%, 70%)
 		position: absolute
 		bottom: 6px
 		-webkit-transition: height 0.3s ease-out
@@ -287,7 +288,7 @@ div.cr.input.raised.hoverable
 .m-label
 	position: relative 
 	margin: 0
-	color: rgba(33, 33, 33, 0.7)
+	color: rgba(33, 33, 33, 0.6)
 	white-space: nowrap
 	line-height: 16px
 	font-weight: 400px
@@ -327,9 +328,15 @@ div.cr.input.raised.hoverable
 	span 
 		position: absolute
 		bottom: -1.41em 
+		display: none
 		right: 0 
 		padding: 8px 5px
 		font-size: 0.899em
+	.m-field 
+		&:focus 
+			+ span
+				display: block 
+
 
 .count-overflow
 	color: $error 

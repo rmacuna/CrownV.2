@@ -12,13 +12,6 @@ content {
   -webkit-box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
   border-radius: 4px; }
-  .cr.card header, .cr.card content, .cr.card footer {
-    position: relative;
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    -webkit-box-flex: 1;
-    flex-grow: 1; }
   .cr.card header {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -29,7 +22,6 @@ content {
       font-size: 1.1em;
       align-self: center;
       font-weight: 600;
-      padding: 0 10px;
       flex-grow: 1; }
     .cr.card header .right-item {
       flex-wrap: nowrap;
@@ -44,20 +36,6 @@ content {
     border-bottom: 1px solid rgba(151, 151, 151, 0.2); }
   .cr.card footer.with.separador {
     border-top: 1px solid rgba(151, 151, 151, 0.2); }
-
-.image.container {
-  position: relative;
-  display: block;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  flex: 0 0 auto; }
-  .image.container img {
-    display: block;
-    width: 100%;
-    max-width: 100%; }
 
 .cr.card.adaptable {
   width: 100%; }
@@ -96,24 +74,49 @@ content {
   border: none !important;
   -webkit-box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.3); }
+  .cr.card.deep.shadow header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .cr.card.deep.shadow footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
 
 .cr.card.variant {
   border-radius: 14px;
   border: 1px solid #e6e6e6;
   -webkit-box-shadow: 0 6px -12px -3px rgba(0, 0, 0, 0.53);
   box-shadow: 0 6px -12px -3px rgba(0, 0, 0, 0.53); }
+  .cr.card.variant header {
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px; }
+  .cr.card.variant footer {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px; }
 
 .cr.card.mobile {
   border-radius: 12px;
   border: 1px solid gainsboro;
   -webkit-box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.5); }
+  .cr.card.mobile header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px; }
+  .cr.card.mobile footer {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px; }
 
 .cr.card.mobile-2 {
   background: #fff;
+  border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.13);
   -webkit-box-shadow: 0 1px 0 -1px rgba(0, 0, 0, 0.14);
   box-shadow: 0 1px 0 -1px rgba(0, 0, 0, 0.14); }
+  .cr.card.mobile-2 header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px; }
+  .cr.card.mobile-2 footer {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
 
 .cr.card header.blue, .cr.card content.blue, .cr.card footer.blue {
   background: #2196F3;

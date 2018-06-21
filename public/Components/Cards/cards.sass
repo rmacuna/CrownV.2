@@ -39,13 +39,6 @@ content
 	-webkit-box-shadow: 0 2px 8px -2px rgba($black, .30)
 	box-shadow: 0 2px 8px -2px rgba($black, .30)
 	border-radius: 4px
-	header,content,footer
-		position: relative 
-		padding: 10px 20px
-		background: none 
-		border: none
-		-webkit-box-flex: 1 
-		flex-grow: 1
 	header
 		border-top-left-radius: 4px
 		border-top-right-radius: 4px
@@ -56,7 +49,6 @@ content
 			font-size: 1.1em
 			align-self: center 
 			font-weight: 600
-			padding: 0 10px
 			flex-grow: 1
 		.right-item 
 			flex-wrap: nowrap
@@ -72,20 +64,7 @@ content
 		border-bottom: 1px solid rgba(151,151,151,.2)
 	footer.with.separador
 		border-top: 1px solid rgba(151,151,151,.2)
-
-.image.container
-	position: relative 
-	display: block 
-	display: flex
-	width: 100% 
-	justify-content: center 
-	align-items: center
-	max-width: 100% 
-	flex: 0 0 auto 
-	img 
-		display: block 
-		width: 100% 
-		max-width: 100% 		
+		
 
 
 .cr.card.adaptable
@@ -122,21 +101,46 @@ content
 	border: none !important
 	-webkit-box-shadow: 0 8px 16px 2px rgba($black,.3)
 	box-shadow: 0 8px 16px 2px rgba($black,.3)
+	header
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
+	footer 
+		border-bottom-left-radius: 10px
+		border-bottom-right-radius: 10px
 .cr.card.variant 
 	border-radius: 14px 
 	border: 1px solid rgba(230,230,230,1)
 	-webkit-box-shadow: 0 6px -12px -3px rgba($black,.53)
 	box-shadow: 0 6px -12px -3px rgba($black,.53)
+	header
+		border-top-left-radius: 14px
+		border-top-right-radius: 14px
+	footer 
+		border-bottom-left-radius: 14px
+		border-bottom-right-radius: 14px
 .cr.card.mobile 
 	border-radius: 12px
 	border: 1px solid rgba(220,220,220,1)
 	-webkit-box-shadow: 0 2px 6px -2px rgba($black,.5)
 	box-shadow: 0 2px 6px -2px rgba($black,.5)
+	header
+		border-top-left-radius: 12px
+		border-top-right-radius: 12px
+	footer 
+		border-bottom-left-radius: 12px
+		border-bottom-right-radius: 12px
 .cr.card.mobile-2
 	background: $white  
+	border-radius: 4px 
 	border: 1px solid rgba($black,.13)
 	-webkit-box-shadow: 0 1px 0 -1px rgba($black,.14)
 	box-shadow: 0 1px 0 -1px rgba($black,.14)
+	header
+		border-top-left-radius: 4px
+		border-top-right-radius: 4px
+	footer 
+		border-bottom-left-radius: 4px
+		border-bottom-right-radius: 4px
 
  
 .cr.card 

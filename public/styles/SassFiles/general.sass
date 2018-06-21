@@ -6,6 +6,8 @@ $link-color: #3D5AFE
 body 
 	font-family: 'Source Sans Pro', sans-serif
 
+body,html
+	height: 100%
 a 
 	color: $link-color
 	position: relative
@@ -34,7 +36,38 @@ a
 	-webkit-box-align: center
 	-ms-flex-align: center
 	align-items: center
+
+
+// Modals and cards share similar style rules 
+section.cr.card,section.cr.modal
+	header,content,footer
+		position: relative 
+		padding: 10px 20px
+		background: none 
+		border: none
+		-webkit-box-flex: 1 
+		flex-grow: 1
 	
+section.cr.card,section.cr.modal 
+	.image.container
+		position: relative 
+		display: flex
+		width: 100% 
+		justify-content: center 
+		align-items: center
+		max-width: 100% 
+		flex: 0 0 auto 
+		img 
+			display: block 
+			width: 100% 
+			max-width: 100% 
+
+@media screen and (max-width: 767px)
+	.cr.modal 
+		width: 95% !important
+		margin: 0 
+
+
 a.link
 	transition: transform 0.3s ease-out
 	&:after 
