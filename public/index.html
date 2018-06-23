@@ -16,96 +16,30 @@
 </head>
 
 <body>
-    <div class="cr container">
-        <div class="row center-md">
-            <div class="col-md-12 col-xs-12">
-                <button trigger="#myModal" class="cr button raised medium">Open My Modal</button>
-            </div>
-        </div>
-    </div>
-    <section id="myModal" class="cr modal medium">
-        <header class="with separador">
+    <section id="myModal" class="cr modal tiny ">
+        <header class="with separador ">
             <div class="title">Header</div>
             <i class="material-icons close right-item">close</i>
         </header>
         <content class="lightf">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aspernatur nemo eos rem saepe veniam laborum, quod voluptas, ex dolorum blanditiis soluta esse perspiciatis inventore nostrum pariatur nam modi, iusto.
         </content>
-        <footer class="with separador ">
+        <footer class="with separador  ">
             <div class="items right">
-                <button class="cr button small pulse royal-blue">Open Project</button>
-                <button data-target="#myModal" class="cr button small pulse close-action red">Close Project</button>
+                <button class="cr button small pulse raised royal-blue">Open Project</button>
+                <button data-target="#myModal" class="cr button small raised pulse close-action red">Close Project</button>
             </div>
         </footer>
     </section>
-    <section>
-        <div class="cr container">
-            <div class="row">
-                <div class="col-md-4 col-xs-12">
-                    <section class="cr card mobile-2 adaptable">
-                        <header class="with separador  ">
-                            <section class="title">Macbook Pro Retina 13" inch 2015 </section>
-                            <section>
-                                <div class="cr button pink tiny">Add to car</div>
-                            </section>
-                        </header>
-                        <div class="image container">
-                            <img src="https://i.imgur.com/SvnuN4M.png" alt="">
-                            <div class="feature container center middle">
-                                <content>
-                                    <button class="cr button white outline">Abrir</button>
-                                </content>
-                            </div>
-                        </div>
-                        <content class="lightf">
-                            Learn one way to build applications with Angular and reuse your code and abilities to build apps for any deployment target. For web, mobile web, native mobile and native desktop.
-                        </content>
-                        <footer class="right with separador">
-                            <div class="cr button royal-blue small pulse ">Get Info</div>
-                            <div class="cr button green  small pulse ">Buy</div>
-                        </footer>
-                    </section>
-                </div>
-                <div class="col-md-4 col-xs-12">
-                    <section class="cr card material hoverable adaptable">
-                        <header class="with separador">
-                            <section class="title">
-                                Header
-                            </section>
-                        </header>
-                        <content>
-                            <p class="lightf">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.
-                            </p>
-                            <div class="row">
-                                <div class="col-md-12 col-xs-12">
-                                    <div class="cr-material royal-blue area with counter">
-                                        <label class="m-label">Your answer</label>
-                                        <textarea class="m-field" type="text" name=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </content>
-                        <footer class=" with separador">
-                            <div class="row ">
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="cr button royal-blue small adaptable pulse ">Get Info</div>
-                                </div>
-                                <div class="col-md-6 col-xs-12">
-                                    <div class="cr button royal-blue small adaptable pulse ">Create project</div>
-                                </div>
-                            </div>
-                        </footer>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="cr button outline large ">Hola</div>
-                <div class="cr button outline large rounded ">Hola</div>
+    <div class="cr container">
+        <div class="row center-md">
+            <div class="col-md-12 col-xs-12">
+                <button trigger="#myModal" id="myButton" class="cr button raised medium">Open My Modal</button>
             </div>
         </div>
-    </section>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Components/Modals/crmodal.js"></script>
     <script src="javascript/crown.js"></script>
 </body>
 

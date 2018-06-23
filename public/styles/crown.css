@@ -1318,12 +1318,14 @@ div.cr.input.raised.hoverable {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation: mdovrl 0.3s ease-out;
-  animation: mdovrl 0.3s ease-out;
+  will-change: opacity;
+  -webkit-animation: mdovrl 300ms ease-out;
+  animation: mdovrl 300ms ease-out;
   overflow-y: auto; }
 
 .mod-show-state {
   display: block !important;
+  will-change: opacity;
   -webkit-animation: fadeIn 0.3s ease-out;
   animation: fadeIn 0.3s ease-out; }
 
@@ -1346,8 +1348,8 @@ section.cr.modal {
     -webkit-box-flex: 1;
     flex-grow: 1; }
   section.cr.modal header {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     display: flex;
     align-items: center; }
     section.cr.modal header .title {
@@ -1363,12 +1365,21 @@ section.cr.modal {
       -ms-flex-pack: center;
       justify-content: flex-end; }
     section.cr.modal header i {
-      font-size: 20px;
-      cursor: pointer; }
+      font-size: 1em;
+      cursor: pointer;
+      font-weight: 600; }
+  section.cr.modal footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
   section.cr.modal header.with.separador {
     border-bottom: 1px solid rgba(151, 151, 151, 0.2); }
   section.cr.modal footer.with.separador {
     border-top: 1px solid rgba(151, 151, 151, 0.2); }
+
+section.cr.modal.material {
+  border-radius: 4px;
+  -webkit-box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px 2px rgba(0, 0, 0, 0.4); }
 
 .cr.modal.tiny {
   width: 300px;
@@ -1390,40 +1401,40 @@ section.cr.modal {
   .cr.modal.large .image.container img {
     max-width: 50%; }
 
-.cr.modal header.blue, .cr.modal content.blue, .cr.modal footer.blue {
+section.cr.modal header.blue, section.cr.modal content.blue, section.cr.modal footer.blue {
   background: #2196F3;
   color: #fff; }
-.cr.modal header.red, .cr.modal content.red, .cr.modal footer.red {
+section.cr.modal header.red, section.cr.modal content.red, section.cr.modal footer.red {
   background: #F44336;
   color: #fff; }
-.cr.modal header.yellow, .cr.modal content.yellow, .cr.modal footer.yellow {
+section.cr.modal header.yellow, section.cr.modal content.yellow, section.cr.modal footer.yellow {
   background: #FFEB3B;
   color: #000; }
-.cr.modal header.green, .cr.modal content.green, .cr.modal footer.green {
+section.cr.modal header.green, section.cr.modal content.green, section.cr.modal footer.green {
   background: #00C853;
   color: #fff; }
-.cr.modal header.black, .cr.modal content.black, .cr.modal footer.black {
+section.cr.modal header.black, section.cr.modal content.black, section.cr.modal footer.black {
   background: #000;
   color: #fff; }
-.cr.modal header.orange, .cr.modal content.orange, .cr.modal footer.orange {
+section.cr.modal header.orange, section.cr.modal content.orange, section.cr.modal footer.orange {
   background: #FF9800;
   color: #fff; }
-.cr.modal header.pink, .cr.modal content.pink, .cr.modal footer.pink {
+section.cr.modal header.pink, section.cr.modal content.pink, section.cr.modal footer.pink {
   background: #E91E63;
   color: #fff; }
-.cr.modal header.indigo, .cr.modal content.indigo, .cr.modal footer.indigo {
+section.cr.modal header.indigo, section.cr.modal content.indigo, section.cr.modal footer.indigo {
   background: #3F51B5;
   color: #fff; }
-.cr.modal header.purple, .cr.modal content.purple, .cr.modal footer.purple {
+section.cr.modal header.purple, section.cr.modal content.purple, section.cr.modal footer.purple {
   background: #9C27B0;
   color: #fff; }
-.cr.modal header.deep-purple, .cr.modal content.deep-purple, .cr.modal footer.deep-purple {
+section.cr.modal header.deep-purple, section.cr.modal content.deep-purple, section.cr.modal footer.deep-purple {
   background: #673AB7;
   color: #fff; }
-.cr.modal header.royal-blue, .cr.modal content.royal-blue, .cr.modal footer.royal-blue {
+section.cr.modal header.royal-blue, section.cr.modal content.royal-blue, section.cr.modal footer.royal-blue {
   background: #3D5AFE;
   color: #fff; }
-.cr.modal header.teal, .cr.modal content.teal, .cr.modal footer.teal {
+section.cr.modal header.teal, section.cr.modal content.teal, section.cr.modal footer.teal {
   background: #009688;
   color: #fff; }
 
