@@ -34,13 +34,31 @@
     <div class="cr container">
         <div class="row center-md">
             <div class="col-md-12 col-xs-12">
-                <button trigger="#myModal" id="myButton" class="cr button raised medium">Open My Modal</button>
+                <button  id="myButton" class="cr button raised medium">Open My Toast</button>
+                <button  id="myButton2" class="cr button raised medium">Open My Toast2</button>
             </div>
         </div>
     </div>
+  <!--   <section class="snackbar ">
+        <content>Hey, I'm a toast! </content>
+        <span class="action">UNDO</span>
+    </section> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="Components/Modals/crmodal.js"></script>
     <script src="javascript/crown.js"></script>
+    <script src="javascript/snackbar.js"></script>
+    <script>
+        $("#myButton").click(function(){
+            $.toast({
+                message: "Toast 1"
+            })
+        })
+        $("#myButton2").click(function(){
+            $.toast({
+                message: "Toast 2 ",
+                timeout: "3000"
+            })
+        })
+    </script>
 </body>
 
 </html>

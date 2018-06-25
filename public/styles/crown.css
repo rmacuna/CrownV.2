@@ -1458,5 +1458,74 @@ section.cr.modal header.teal, section.cr.modal content.teal, section.cr.modal fo
     background: none; }
   100% {
     background: rgba(1, 1, 1, 0.66); } }
+section.snackbar {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 5%;
+  left: 50%;
+  vertical-align: middle;
+  width: 301px;
+  min-height: 52px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: flex;
+  font-size: 14px;
+  -webkit-animation: snackEnter 800ms ease-out;
+  animation: snackEnter 800ms ease-out; }
+  section.snackbar content {
+    flex-grow: 3;
+    color: #fff;
+    padding: 17px 17px;
+    vertical-align: middle; }
+  section.snackbar .action {
+    color: #fff;
+    flex-grow: 0;
+    padding: 17px 17px;
+    color: #fbdb65;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: center; }
+
+section.snackbar.tiny {
+  width: 200px; }
+
+section.snackbar.medium {
+  width: 400px; }
+
+@media screen and (max-width: 768px) {
+  section.snackbar {
+    max-width: 90%;
+    margin: auto;
+    bottom: 0; } }
+@-webkit-keyframes snackEnter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(100%);
+    -ms-transform: translateX(-50%) translateY(100%);
+    transform: translateX(-50%) translateY(100%); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); } }
+@keyframes snackEnter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(100%);
+    -ms-transform: translateX(-50%) translateY(100%);
+    transform: translateX(-50%) translateY(100%); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); } }
 
 /*# sourceMappingURL=crown.css.map */
