@@ -9,8 +9,7 @@ var waiting = false;
             actionButton: false,
             actionMessage: "UNDO",
             dismiss: false,
-            timeout: "2000",
-            stackMode: false,
+            timeout: 2000,
             onAction: $.noop
         }, options);
 
@@ -22,43 +21,52 @@ var waiting = false;
         while (toastQueue.length > 0 && times.length > 0 && !waiting) {
             showAppendElement(toastQueue.shift(), times.shift())
         }
+
         function showAppendElement(elem, time) {
             var action;
             waiting = true;
-            if (!settings.stackMode) {
-                if (settings.actionButton) {
-                    if (settings.dismiss) {
-                        action = $("<span class='action undo'>" + settings.actionMessage + "</span>");
-                        action.on('click', function(e) {
-                            e.preventDefault();
-                            console.log("closed")
-                        })
-                        elem.append(action)
-                    } else {
-                        action = $("<span class='action'>" + settings.actionMessage + "</span>");
-                        if ($.isFunction(onAction)) {
-                            action.on('click', onAction)
-                        } else {
-                            throw new Error("The argument passed is not a function. ")
-                        }
-                        elem.append(action)
-                    }
-                }
-                $('body').append(elem)
-                setTimeout(function() {
-                    elem.css({
-                        "-webkit-transition": "opacity 0.3s ease-out",
-                        "-o-transition": "opacity 0.3s ease-out",
-                        "transition": "opacity 0.3s ease-out",
-                        "opacity": "0"
+            if (settings.actionButton) {
+                if (settings.dismiss) {
+                    action = $("<span class='action undo'>" + settings.actionMessage + "</span>");
+                    action.on('click', function(e) {
+                        e.preventDefault();
+                        elem.addClass('hide')
                     })
-                }, time)
+                    elem.append(action)
+                } else {
+                    action = $("<span class='action'>" + settings.actionMessage + "</span>");
+                    if ($.isFunction(settings.onAction)) {
+                        action.on('click', settings.onAction)
+                    } else {
+                        throw new Error("The argument passed is not a function. ")
+                    }
+                    elem.append(action)
+                }
+            }
+            $('body').append(elem)
+            if (time == 'infinite' && settings.actionButton) {
+                action.on('click', function() {
+                    elem.addClass('hide')
+                    setTimeout(function() {
+                        elem.remove();
+                        waiting = false;
+                        if (toastQueue.length > 0 && times.length > 0) { showAppendElement(toastQueue.shift(), times.shift()) }
+                    }, (300 + 100))
+
+                })
+            } else {
+                if (!elem.hasClass('hide')) {
+                    setTimeout(function() {
+                        elem.addClass('hide')
+                    }, time)
+                }
                 setTimeout(function() {
                     elem.remove();
                     waiting = false;
-                    if (toastQueue.length > 0 && times.length > 0 ) {showAppendElement(toastQueue.shift(),times.shift())}
-                }, (parseInt(time) + 200))
+                    if (toastQueue.length > 0 && times.length > 0) { showAppendElement(toastQueue.shift(), times.shift()) }
+                }, (time + 200))
             }
+
         }
     };
 }(jQuery));

@@ -39,26 +39,30 @@
             </div>
         </div>
     </div>
-  <!--   <section class="snackbar ">
-        <content>Hey, I'm a toast! </content>
-        <span class="action">UNDO</span>
-    </section> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="javascript/crown.js"></script>
     <script src="javascript/snackbar.js"></script>
-    <script>
+   <!--  <script>
         $("#myButton").click(function(){
             $.toast({
-                message: "Toast 1"
+                message: "Toast 1",
+                actionButton: true,
+                actionMessage: "SAVE",
+                onAction: function(){
+                    
+                    //Pass a function to the action button.
+                },
+                timeout: "infinite"
             })
         })
         $("#myButton2").click(function(){
             $.toast({
-                message: "Toast 2 ",
-                timeout: "3000"
+                message: "Toast 2",
+                timeout: 3000
             })
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
