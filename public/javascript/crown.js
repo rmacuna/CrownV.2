@@ -127,8 +127,7 @@ $(document).ready(function() {
             modal.removeAttr('style');
         }, 350)
     })
-    $(document).click(function(e) {
-        e.preventDefault();
+    $(document).click(function() {
         if ($('body').hasClass('has-modal')) {
             if ($(e.target)[0] == $("#md-ovrl-state")[0]) {
                 var modal = $("#md-ovrl-state .cr.modal")

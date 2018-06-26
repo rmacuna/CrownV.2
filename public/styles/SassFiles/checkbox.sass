@@ -1,0 +1,278 @@
+$primary: #3F51B5 
+$secondary: #3D5AFE
+$accent: #E91E63
+
+$black: #000 
+$white: #fff
+$error: #B71C1C
+$gray: #9E9E9E
+$gray-2: #616161
+$yellow: #FFEB3B
+$blue: #2196F3
+$gold: #bf9b30
+$gold-deep: #a67c00
+$light-blue: #03A9F4
+$red: #F44336
+$red-1: #B71C1C
+$green: #00C853
+$royal-blue: #3D5AFE
+
+$intense-green: #1DE9B6
+$intense-purple: #9C27B0
+
+$orange: #FF9800
+$amber: #FFC107
+$light-green: #8BC34A
+$teal: #009688
+$cyan: #00BCD4 
+$indigo: #3F51B5 
+$deep-purple: #673AB7
+$pink: #E91E63
+$purple: #9C27B0 
+
+div.cr.checkbox 
+	position: relative 
+	display: inline-block 
+	min-width: 14px 
+	min-height: 14px 
+	border-radius: 2px
+	border: none 
+	outline: none 
+	background: none 
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden 
+	vertical-align: baseline
+	input[type="checkbox"] 
+		position: absolute 
+		top: 0 
+		left: 0
+		opacity: 0 !important
+		z-index: 1
+		cursor: pointer
+		+ label 
+			position: relative
+			display: block 
+			padding-left: 1.4em
+			padding-top: 0 
+			&:after,&:before
+				box-sizing: border-box
+			&:before
+				content: ""
+				width: 18px 
+				height: 18px 
+				border-radius: 2px
+				border: 2px solid rgba(22,22,22,.27) 
+				position: absolute 
+				top: 0 
+				left: 0 
+				-webkit-transition: background 0.2s linear, border-color 0.2s linear
+				-o-transition: background 0.2s linear, border-color 0.2s linear
+				transition: background 0.2s linear, border-color 0.2s linear
+
+			&:after 
+				content: ""
+				position: absolute 
+				top: 0 
+				left: 0
+				width: 16px 
+				height: 7px
+				margin: 3px 1px
+				border-left: 2px solid $gray 
+				border-top-left-radius: 1px
+				border-bottom-left-radius: 2px
+				border-bottom-right-radius: 2px
+
+				border-bottom: 2px solid $gray 
+				-webkit-transform: rotate(-45deg)
+				-ms-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+
+				-webkit-transition: border-color 0.3s linear, opacity 0.3s linear
+				-o-transition: border-color 0.3s linear, opacity 0.3s linear
+				transition: border-color 0.3s linear, opacity 0.3s linear
+
+				opacity: 0 
+
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:after 
+					opacity: 1
+					border-color: #fff
+				&:before 
+					background: $accent 
+					border-color: $accent
+
+
+div.cr.checkbox.variant
+	input[type="checkbox"]
+		outline: none 
+		border: none 
+		+ label 
+			&:before 
+				transition: transform 0.3s ease-out
+
+		&:checked 
+			+ label
+				&:before 
+					transition: transform 0.3s ease-out
+					height: 10px
+					-webkit-transform: rotate(-405deg)
+					-ms-transform: rotate(-405deg)
+					transform: rotate(-405deg)
+					border-top: none !important 
+					border-right: none !important
+					background: none !important
+				&:after 
+					display: none !important 
+
+div.cr.checkbox.disable
+	input[type="checkbox"]
+		user-select: none
+		display: none 
+	label 
+		&:before 
+			cursor: no-drop
+			border-color: lighten($gray, 25)
+
+
+
+div.cr.checkbox.blue 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $blue !important 
+					border-color: $blue !important 
+
+div.cr.checkbox.blue.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $blue !important 
+div.cr.checkbox.red 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $red !important 
+					border-color: $red !important 
+
+div.cr.checkbox.red.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $red !important 
+
+div.cr.checkbox.green 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $green !important 
+					border-color: $green !important   
+
+div.cr.checkbox.green.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $green !important 
+
+div.cr.checkbox.indigo 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $indigo !important 
+					border-color: $indigo !important 
+
+div.cr.checkbox.indigo.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $indigo !important 
+div.cr.checkbox.black 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $black !important 
+					border-color: $black !important 
+div.cr.checkbox.black.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $black !important 
+
+			
+
+div.cr.checkbox.yellow 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $yellow !important 
+					border-color: $yellow !important  
+
+div.cr.checkbox.yellow.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $yellow !important 
+
+div.cr.checkbox.amber 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $amber !important 
+					border-color: $amber !important
+
+div.cr.checkbox.amber.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $amber !important 
+div.cr.checkbox.purple 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $purple !important 
+					border-color: $purple !important 
+
+div.cr.checkbox.purple.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $purple !important 
+div.cr.checkbox.gold 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $gold !important 
+					border-color: $gold !important
+div.cr.checkbox.gold.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $gold !important 
