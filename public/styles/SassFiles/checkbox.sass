@@ -103,6 +103,61 @@ div.cr.checkbox
 					background: $accent 
 					border-color: $accent
 
+	input[type="radio"]
+		position: absolute 
+		top: 0 
+		left: 0
+		opacity: 0 !important
+		z-index: 1
+		cursor: pointer
+		+ label 
+			position: relative
+			display: block 
+			padding-left: 1.4em
+			padding-top: 0 
+			&:after,&:before
+				box-sizing: border-box
+			&:before
+				content: ""
+				width: 18px 
+				height: 18px 
+				background: none
+				border-radius: 100%
+				border: 2px solid rgba(22,22,22,.27) 
+				position: absolute 
+				top: 0 
+				left: 0 
+				-webkit-transition: border-color 0.2s linear
+				-o-transition: border-color 0.2s linear
+				transition: border-color 0.2s linear
+			&:after 
+				content: ""
+				position: absolute 
+				top: 0 
+				left: 0
+				width: 10px 
+				height: 10px
+				border-radius: 100%
+				background: $accent
+				margin: 4px 4px 
+				-webkit-transform: scale(0)
+				-ms-transform: scale(0)
+				transform: scale(0)
+				-webkit-transition:  transform 0.3s linear
+				-o-transition:  transform 0.3s linear
+				transition:  transform 0.3s linear
+
+
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after 
+					-webkit-transition:  transform 0.3s linear
+					-o-transition:  transform 0.3s linear
+					transition:  transform 0.3s linear
+					transform: scale(1)
+				&:before 
+					border-color: $accent
 
 div.cr.checkbox.variant
 	input[type="checkbox"]
@@ -126,8 +181,8 @@ div.cr.checkbox.variant
 				&:after 
 					display: none !important 
 
-div.cr.checkbox.disable
-	input[type="checkbox"]
+div.cr.checkbox.disabled
+	input[type="checkbox"], input[type="radio"]
 		user-select: none
 		display: none 
 	label 
@@ -144,6 +199,13 @@ div.cr.checkbox.blue
 				&:before 
 					background: $blue !important 
 					border-color: $blue !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $blue !important 
+				&:before 
+					border-color: $blue !important 
 
 div.cr.checkbox.blue.variant 
 	input[type="checkbox"]
@@ -158,6 +220,13 @@ div.cr.checkbox.red
 			+ label 
 				&:before 
 					background: $red !important 
+					border-color: $red !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $red !important 
+				&:before 
 					border-color: $red !important 
 
 div.cr.checkbox.red.variant 
@@ -175,6 +244,13 @@ div.cr.checkbox.green
 				&:before 
 					background: $green !important 
 					border-color: $green !important   
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $green !important 
+				&:before 
+					border-color: $green !important 
 
 div.cr.checkbox.green.variant 
 	input[type="checkbox"]
@@ -191,6 +267,13 @@ div.cr.checkbox.indigo
 				&:before 
 					background: $indigo !important 
 					border-color: $indigo !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $indigo !important 
+				&:before 
+					border-color: $indigo !important 
 
 div.cr.checkbox.indigo.variant 
 	input[type="checkbox"]
@@ -205,6 +288,13 @@ div.cr.checkbox.black
 			+ label 
 				&:before 
 					background: $black !important 
+					border-color: $black !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $black !important 
+				&:before 
 					border-color: $black !important 
 div.cr.checkbox.black.variant 
 	input[type="checkbox"]
@@ -222,6 +312,13 @@ div.cr.checkbox.yellow
 			+ label 
 				&:before 
 					background: $yellow !important 
+					border-color: $yellow !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $yellow !important 
+				&:before 
 					border-color: $yellow !important  
 
 div.cr.checkbox.yellow.variant 
@@ -232,6 +329,7 @@ div.cr.checkbox.yellow.variant
 					background: none !important 
 					border-color: $yellow !important 
 
+
 div.cr.checkbox.amber 
 	input[type="checkbox"]
 		&:checked
@@ -239,6 +337,13 @@ div.cr.checkbox.amber
 				&:before 
 					background: $amber !important 
 					border-color: $amber !important
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $amber !important 
+				&:before 
+					border-color: $amber !important 
 
 div.cr.checkbox.amber.variant 
 	input[type="checkbox"]
@@ -253,6 +358,13 @@ div.cr.checkbox.purple
 			+ label 
 				&:before 
 					background: $purple !important 
+					border-color: $purple !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $purple !important 
+				&:before 
 					border-color: $purple !important 
 
 div.cr.checkbox.purple.variant 
@@ -269,6 +381,13 @@ div.cr.checkbox.gold
 				&:before 
 					background: $gold !important 
 					border-color: $gold !important
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $gold !important 
+				&:before 
+					border-color: $gold !important 
 div.cr.checkbox.gold.variant 
 	input[type="checkbox"]
 		&:checked 
