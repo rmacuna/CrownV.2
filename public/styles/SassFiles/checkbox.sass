@@ -42,6 +42,7 @@ div.cr.checkbox
 	-webkit-backface-visibility: hidden
 	backface-visibility: hidden 
 	vertical-align: baseline
+	margin: 4px 4px
 	input[type="checkbox"] 
 		position: absolute 
 		top: 0 
@@ -74,9 +75,9 @@ div.cr.checkbox
 				position: absolute 
 				top: 0 
 				left: 0
-				width: 16px 
-				height: 7px
-				margin: 3px 1px
+				width: 12px 
+				height: 5px
+				margin: 5px 3px
 				border-left: 2px solid $gray 
 				border-top-left-radius: 1px
 				border-bottom-left-radius: 2px
@@ -166,7 +167,6 @@ div.cr.checkbox.variant
 		+ label 
 			&:before 
 				transition: transform 0.3s ease-out
-
 		&:checked 
 			+ label
 				&:before 
@@ -207,6 +207,21 @@ div.cr.checkbox.blue
 				&:before 
 					border-color: $blue !important 
 
+div.cr.checkbox.royal-blue 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $royal-blue !important 
+					border-color: $royal-blue  !important 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:after
+					background: $royal-blue  !important 
+				&:before 
+					border-color: $royal-blue  !important 
+
 div.cr.checkbox.blue.variant 
 	input[type="checkbox"]
 		&:checked 
@@ -214,6 +229,14 @@ div.cr.checkbox.blue.variant
 				&:before 
 					background: none !important 
 					border-color: $blue !important 
+
+div.cr.checkbox.royal-blue.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $royal-blue !important 
 div.cr.checkbox.red 
 	input[type="checkbox"]
 		&:checked 
