@@ -2,7 +2,7 @@ $black: #000
 $button-xsmall-size: 6px 12px
 $button-small-size: 8px 18px
 $button-medium-size: 8px 24px
-$button-large-size: 10px 28px
+$button-large-size: 10px 24px
 $button-big-size: 14px 30px
 
 $accent: #E91E63
@@ -74,8 +74,9 @@ div.cr.button
 
 	padding: 8px 10px
 	display: flex
+	flex-wrap: wrap
 	align-items: center
-	white-space: nowrap 
+	// white-space: nowrap 
 	cursor: pointer
 
 	-ms-transition: background 0.3s ease-out, box-shadow 0.3s ease-out  
@@ -87,10 +88,18 @@ div.cr.button
 
 
 .cr.button.icon
+	flex-wrap: nowrap
 	i
+		display: flex 
+		height: 100%
+		top: 0
+		margin-left: 10px
 		font-size: 18px
-		padding-left: 5px
-
+		right: 0
+	content 
+		flex-grow: 1
+		text-align: start
+		
 .cr.button
 	.ripple 
 		background: $gray 
@@ -104,6 +113,9 @@ div.cr.button
 .cr.button.tiny
 	font-size: 0.750em
 	padding: $button-xsmall-size
+	i 
+		font-size: 1.22em
+
 
 .cr.button.small
 	font-size: 0.750em
