@@ -127,7 +127,8 @@ div.cr.button {
   position: relative;
   text-decoration: none;
   padding: 8px 10px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   cursor: pointer;
   -ms-transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -136,6 +137,10 @@ div.cr.button {
   transition: background 0.3s, box-shadow 0.3s ease-out; }
   .cr.button:active {
     background: rgba(0, 0, 0, 0.2); }
+
+.cr.button.icon i {
+  font-size: 18px;
+  padding-left: 5px; }
 
 .cr.button .ripple {
   background: #9E9E9E; }
@@ -1407,7 +1412,6 @@ div.cr.checkbox {
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        background: #E91E63;
         margin: 4px 4px;
         -webkit-transform: scale(0);
         -ms-transform: scale(0);
@@ -1419,6 +1423,7 @@ div.cr.checkbox {
     -webkit-transition: transform 0.3s linear;
     -o-transition: transform 0.3s linear;
     transition: transform 0.3s linear;
+    background: #E91E63;
     transform: scale(1); }
   div.cr.checkbox input[type="radio"]:checked + label:before {
     border-color: #E91E63; }
