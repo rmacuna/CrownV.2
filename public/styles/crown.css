@@ -1587,8 +1587,8 @@ div.cr.checkbox.gold.variant input[type="checkbox"]:checked + label:before {
 .mod-show-state {
   display: block !important;
   will-change: opacity;
-  -webkit-animation: fadeIn 0.3s ease-out;
-  animation: fadeIn 0.3s ease-out; }
+  -webkit-animation: crFadeIn 0.3s ease-out;
+  animation: crFadeIn 0.3s ease-out; }
 
 section.cr.modal {
   width: 527px;
@@ -1699,12 +1699,12 @@ section.cr.modal header.teal, section.cr.modal content.teal, section.cr.modal fo
   background: #009688;
   color: #fff; }
 
-@-webkit-keyframes fadeIn {
+@-webkit-keyframes crFadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-@keyframes fadeIn {
+@keyframes crFadeIn {
   0% {
     opacity: 0; }
   100% {
