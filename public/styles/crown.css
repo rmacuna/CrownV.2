@@ -1318,6 +1318,35 @@ div.cr.input.raised.hoverable {
 .cr-material.deep-purple.is-focused:after {
   background-color: #673AB7; }
 
+nav.cr.navbar {
+  display: flex;
+  padding: 0 20px;
+  margin-bottom: 8px;
+  min-height: 60px;
+  flex: 1;
+  -webkit-box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.8); }
+  nav.cr.navbar a.brand {
+    display: flex;
+    min-height: 46px !important;
+    min-width: 132px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer; }
+  nav.cr.navbar ul.menu {
+    list-style: none;
+    display: flex;
+    flex: 1;
+    margin: 0; }
+    nav.cr.navbar ul.menu li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      min-width: 132px;
+      min-height: 46px; }
+
 div.cr.checkbox, div.cr.switch {
   position: relative;
   display: inline-block;
