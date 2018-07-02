@@ -128,8 +128,8 @@ div.cr.button {
   text-decoration: none;
   padding: 8px 10px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
   cursor: pointer;
   -ms-transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
   -moz-transition: background 0.3s ease-out, box-shadow 0.3s ease-out;
@@ -139,7 +139,8 @@ div.cr.button {
     background: rgba(0, 0, 0, 0.2); }
 
 .cr.button.icon {
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  align-items: center; }
   .cr.button.icon i {
     display: flex;
     height: 100%;
@@ -182,7 +183,7 @@ div.cr.button {
   font-size: 1em;
   padding: 14px 30px; }
 
-.cr.button.adaptable {
+.cr.button.flexible {
   width: 100%; }
 
 .cr.button.raised {
@@ -795,7 +796,7 @@ content {
   .cr.card footer.with.separador {
     border-top: 1px solid rgba(151, 151, 151, 0.2); }
 
-.cr.card.adaptable {
+.cr.card.flexible {
   width: 100%; }
 
 .cr.card.hoverable {
@@ -949,21 +950,20 @@ div.cr.input {
   position: relative;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.8);
-  width: auto;
-  padding: 0.5em 0; }
+  margin: 4px 2px; }
   div.cr.input input {
     margin: 2px 2px;
     height: 32px;
     font-size: 14px;
     line-height: 1.2em;
     border-radius: 4px;
-    border: 1px solid #9E9E9E;
+    border: 1px solid rgba(158, 158, 158, 0.4);
     padding: 2px 15px;
     font-family: "Source Sans Pro", sans-serif;
     outline: none;
     transition: border-color 0.4s ease-out, background 0.3s ease-out; }
     div.cr.input input:focus {
-      border-color: #7085fe; }
+      border-color: rgba(61, 90, 254, 0.5); }
     div.cr.input input::placeholder {
       color: rgba(33, 33, 33, 0.5);
       font-weight: 400; }
@@ -1015,15 +1015,10 @@ div.cr.input.big {
     div.cr.input.big input::placeholder {
       font-size: 1.1em; }
 
-div.cr.input.adaptable {
-  max-width: 100%;
-  width: 100%; }
-  div.cr.input.adaptable input {
-    width: 100%;
-    width: -moz-available;
-    width: fill-available;
-    width: -webkit-fill-available;
-    max-width: 100%; }
+div.cr.input.flexible {
+  display: flex; }
+  div.cr.input.flexible input {
+    flex: 1 0 auto; }
 
 div.cr.input.transparent input {
   background: none;
