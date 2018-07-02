@@ -4,6 +4,7 @@ body {
 
 body, html {
   height: 100%;
+  width: 100%;
   margin: 0; }
 
 a {
@@ -1320,6 +1321,7 @@ div.cr.input.raised.hoverable {
 
 nav.cr.navbar {
   display: flex;
+  width: fit-content;
   padding: 0 20px;
   margin-bottom: 8px;
   min-height: 60px;
@@ -1346,6 +1348,8 @@ nav.cr.navbar {
       font-size: 14px;
       min-width: 132px;
       min-height: 46px; }
+    nav.cr.navbar ul.menu li.right {
+      float: right; }
 
 div.cr.checkbox, div.cr.switch {
   position: relative;
