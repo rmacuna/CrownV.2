@@ -30,7 +30,7 @@ $deep-purple: #673AB7
 $pink: #E91E63
 $purple: #9C27B0 
 
-div.cr.checkbox 
+div.cr.checkbox, div.cr.switch
 	position: relative 
 	display: inline-block 
 	min-width: 14px 
@@ -43,6 +43,8 @@ div.cr.checkbox
 	backface-visibility: hidden 
 	vertical-align: baseline
 	margin: 4px 4px
+
+div.cr.checkbox 
 	input[type="checkbox"] 
 		position: absolute 
 		top: 0 
@@ -160,6 +162,199 @@ div.cr.checkbox
 				&:before 
 					border-color: $accent
 
+
+div.cr.switch
+	display: flex 
+	input[type="checkbox"]
+		position: absolute
+		top: 0 
+		left: 0 
+		width: 35px
+		flex-grow: 0 
+		z-index: 1
+		cursor: pointer
+		opacity: 0 !important 
+		+ label
+			position: relative
+			display: block 
+			padding-left: 2.7em
+			padding-top: 0 
+			&:after,&:before
+				box-sizing: border-box
+			&:before
+				content: ""
+				width: 35px 
+				height: 10px 
+				border-radius: 50px
+				background: rgba(223,223,223,1) 
+				position: absolute 
+				margin-top: 5px
+				top: 0
+				left: 0 
+				-webkit-transition: background 0.2s linear, border-color 0.2s linear
+				-o-transition: background 0.2s linear, border-color 0.2s linear
+				transition: background 0.2s linear, border-color 0.2s linear
+			&:after
+				content: ""
+				position: absolute 
+				left: 0
+				top: 0
+				margin-bottom: 4px
+				width: 19px
+				height: 19px
+				border-radius: 100%
+				background: $white
+				border: 1px solid rgba(216,216,216,1)
+				-webkit-transition: transform 0.3s ease-out , background 0.3s ease-out 
+				-o-transition: transform 0.3s ease-out , background 0.3s ease-out 
+				transition: transform 0.3s ease-out , background 0.3s ease-out 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $accent 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $accent
+
+
+
+div.cr.switch.blue
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $blue 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $blue
+
+div.cr.switch.red
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $red 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $red
+div.cr.switch.green
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $green 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $green
+div.cr.switch.yellow
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $yellow 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $yellow
+
+div.cr.switch.orange
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $orange 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $orange
+div.cr.switch.amber
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $amber 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $amber
+div.cr.switch.black
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $black 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $black
+
+div.cr.switch.royal-blue
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $royal-blue 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $royal-blue
+
+div.cr.switch.teal
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $teal 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $teal
+div.cr.switch.purple
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $purple 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $purple
+div.cr.switch.indigo
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $indigo 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $indigo
+div.cr.switch.gold
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $gold 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $gold
+div.cr.switch.deep-purple
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $deep-purple 
+				&:after 
+					-webkit-transform: translateX(17px)
+					transform: translateX(17px)
+					border-color: $deep-purple
+
 div.cr.checkbox.variant
 	input[type="checkbox"]
 		outline: none 
@@ -192,7 +387,7 @@ div.cr.checkbox.disabled
 
 
 
-div.cr.checkbox.blue 
+div.cr.checkbox.blue
 	input[type="checkbox"]
 		&:checked 
 			+ label 
