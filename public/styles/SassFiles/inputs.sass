@@ -68,15 +68,12 @@ div.cr.input
 		&::placeholder
 			color: rgba(33,33,33,.5)
 			font-weight: 400 
-
 div.cr.input.tiny
 	font-size: 0.8em
 	input 
 		padding: $input-tiny-size
 		font-size: 0.95111em
-		padding-right: 1.399em !important
-		+ i 
-			padding: 8px 0
+
 
 div.cr.input.small 
 	font-size: 0.896em
@@ -85,7 +82,7 @@ div.cr.input.small
 		padding-right: 1.2em
 		font-size: 0.96111em
 		+ i 
-			padding: 10px 0
+			padding: 8px 0
 
 div.cr.input.medium 
 	font-size: 0.996em
@@ -149,13 +146,15 @@ div.cr.input.rounded
 
 div.cr.input.icon 
 	position: relative 
-	display: inline-block 
+	display: inline-flex 
 	input 
+		padding-right: 1.9em
+		align-self: center
 		+ i 
 			position: absolute
-			bottom: 0 
-			padding: 10px 5px 
+			padding: 11px 8px 
 			right: 0 
+			align-self: center
 			font-size: 1.375em 
 
 div.cr.input.raised 

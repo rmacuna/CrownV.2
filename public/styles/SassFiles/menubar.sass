@@ -5,26 +5,45 @@ $accent: #E91E63
 
 $royal-blue: #3D5AFE
 
+
+
 nav.cr.navbar
-	display: flex
 	padding: 0 20px
 	margin-bottom: 8px
 	min-height: 60px
-	flex: 1
-	-webkit-box-shadow: 0 0 4px -1px rgba(#000,.8)
-	box-shadow:  0 0 4px -1px rgba(#000,.8)
+	background: rgba(245, 245, 245, .5)
+	-webkit-box-shadow: 0 0 4px -2px rgba(#000,.8)
+	box-shadow:  0 0 4px -2px rgba(#000,.8)
+	display: flex
+	justify-content: space-between
 	a.brand
-		display: flex 
 		min-height: 46px !important
 		min-width: 132px 
-		align-items: center
-		justify-content: center
-		z-index: 1
-		cursor: pointer
+		display: flex
+		align-items: center 
+		justify-content: flex-start 
+		text-align: center
+		font-size: 22px
+		img
+			margin-left: auto 
+			margin-right: auto 
+			height: 42px
+			width: 42px 
+		img.only.mobile
+			display: none
+	.nav.wrapper 
+		display: flex
+		align-items: center 
+	li.item 
+		&:hover
+			> a.link 
+				&:after 
+					-webkit-transform: scaleX(1)
+					-ms-transform: scaleX(1)
+					transform: scaleX(1)
 	ul.menu
 		list-style: none
 		display: flex
-		flex: 1
 		margin: 0 
 		li
 			display: flex
@@ -33,21 +52,49 @@ nav.cr.navbar
 			font-size: 14px
 			min-width: 132px
 			cursor: pointer
-			min-height: 46px 
-		li.right 
-			flex-grow: 1
-			justify-content: flex-end
+			min-height: 46px
 
+	ul.menu-mobile
+		list-style: none
+		margin: 0
+		display: none
+		flex-direction: column
+
+		-webkit-transition: all 0.3s ease-out 
+		-o-transition: all 0.3s ease-out
+		transition: all 0.3s ease-out
+
+	button.toggle.menu 
+		display: none 
+		background: none 
+		border: none 
+		outline: none 
+		z-index: 1
+		cursor: pointer
+
+	li.item 
+		a
+			font-size: 1.1em
+
+	ul.menu.right-oriented
+		flex-direction: row-reverse
+
+li.searchbar
+	input 
+		background: none
+
+
+li.searchbar.flexible
+	display: flex 
+	flex-grow: 1
+	input 
+		display: flex
+		flex-grow: 1
 	
 
-ul.menu-mobile
-	list-style: none
-	margin: 0
-	display: none 
-
-
-@media screen and (max-width: 612px)
+@media screen and (max-width: 768px)
 	nav.cr.navbar
+		flex-direction: column
 		ul.menu 
 			display: none
 		a.brand 
@@ -56,16 +103,25 @@ ul.menu-mobile
 			flex-grow: 1
 			-webkit-box-pack: center
 			-ms-flex-pack: center
+			flex: 0 0 50%
 			justify-content: center
-		ul.menu-mobile
+			img 
+				margin: 4px 
+			img.only.mobile 
+				display: flex
+				+ span 
+					display: none
+			img.only.desktop
+				display: none
+		.nav.wrapper
+			margin-top: auto 
+			margin-bottom: auto 
+			a.brand 
+				flex-grow: 2
+		button.toggle.menu 
 			display: flex
-			flex-grow: 0
-			justify-content: flex-end
-			align-items: center
-			padding: 0 
-			i.menu
-				cursor: pointer
-				padding: 0 
-				margin: 0
-			li 
-				display: none 
+			flex-basis: 0 0 50%
+
+
+		
+

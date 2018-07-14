@@ -16,15 +16,31 @@
 </head>
 
 <body>
-    <nav class="cr navbar">
-        <a class="brand" href="#">Home</a>
+    <nav class="cr navbar ">
+        <div class="nav wrapper">
+            <a class="brand" href="#">
+                <img src="icon-test.png" alt="">
+                <span>Crown</span>
+            </a>
+            <button toggle="#nav-mobile" class="toggle menu">
+                <i class="material-icons">menu</i>
+            </button>
+        </div>
         <ul class="menu">
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li class="right">Log In</li>
+            <li class="item">
+                <a href="" class="link">Item1</a>
+            </li>
+            <li class="item">
+                <a href="" class="link">Item2</a>
+            </li>
+            <li class="item">
+                <a href="" class="cr button indigo medium flexible item pulse">Login</a>
+            </li>
+            <li class="item">
+                <a href="" class="cr button indigo medium flexible item pulse">Register</a>
+            </li>
         </ul>
-        <ul class="menu-mobile">
-            <i class="material-icons menu">menu</i>
+        <ul id="#nav-mobile" class="menu-mobile">
             <li>About Us</li>
             <li>Contact Us</li>
             <li>Login</li>
@@ -32,11 +48,10 @@
     </nav>
     <div class="cr container">
         <button class="cr button  hoverable raised deep-purple">Fornite</button>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/crmenubar.js"></script>
     <script src="javascript/crown.js"></script>
-    <script src="javascript/checkbox.js"></script>
     <!-- <script src="javascript/snackbar.js"></script> -->
     <!--  <script>
         $("#myButton").click(function(){

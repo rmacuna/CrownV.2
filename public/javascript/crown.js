@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
+    $("div.cr.button.pulse, button.cr.button.pulse, a.pulse").click(function(e) {
         e.preventDefault();
         $('.ripple').remove();
 

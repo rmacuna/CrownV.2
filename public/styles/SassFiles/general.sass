@@ -10,6 +10,8 @@ body,html
 	height: 100%
 	width: 100%
 	margin: 0 
+*
+	box-sizing: border-box
 a 
 	color: lighten($link-color, 5)
 	position: relative
@@ -71,6 +73,8 @@ section.cr.card,section.cr.modal
 
 
 a.link
+	-webkit-transition: transform 0.3s ease-out 
+	-o-transition: transform 0.3s ease-out 
 	transition: transform 0.3s ease-out
 	&:after 
 		content: ' '
@@ -86,12 +90,10 @@ a.link
 
 		-webkit-transition: transform 0.3s ease-out
 		-o-transition: transform 0.3s ease-out
-		-moz-transitioN: transform 0.3s ease-out
 		transition: transform 0.3s ease-out
 
 		-webkit-transform: scaleX(0)
-		-moz-transform: scaleX(0)
-		-o-transform: scaleX(0)
+		-ms-transform: scaleX(0)
 		transform: scaleX(0)
 	&:hover
 		&:after 
