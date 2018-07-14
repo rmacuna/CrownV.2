@@ -17,6 +17,8 @@ nav.cr.navbar
 	display: flex
 	justify-content: space-between
 	overflow: hidden 
+	.cr 
+		display: none 
 	a.brand
 		min-height: 46px !important
 		min-width: 132px 
@@ -60,16 +62,16 @@ nav.cr.navbar
 		padding: 0
 		flex-basis: 0
 		list-style: none
-		display: none
+		height: 0 
 		flex-direction: column
-		-webkit-transition: flex-basis 0.3s ease-out 
-		-o-transition: flex-basis 0.3s ease-out
-		transition: flex-basis 0.3s ease-out
+		-webkit-transition: all 0.3s ease-out 
+		-o-transition: all 0.3s ease-out
+		transition: all 0.3s ease-out
 		li 
 			padding: 5px 0 
 			width: 100%
 			position: relative
-			min-heigth: 32px
+			min-height: 32px
 
 	button.toggle.menu 
 		display: none 
@@ -99,12 +101,13 @@ li.searchbar.flexible
 		flex-grow: 1
 	
 
-
 @media screen and (max-width: 898px)
 	.cr_sideNav_show_state
 		display: flex !important
 		flex-basis: 100% !important
-	
+	.triggering
+		height: auto !important
+		flex-basis: 100%
 
 @media screen and (max-width: 898px)
 	nav.cr.navbar
