@@ -1330,7 +1330,8 @@ nav.cr.navbar {
   -webkit-box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 4px -2px rgba(0, 0, 0, 0.8);
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow: hidden; }
   nav.cr.navbar a.brand {
     min-height: 46px !important;
     min-width: 132px;
@@ -1366,13 +1367,20 @@ nav.cr.navbar {
       cursor: pointer;
       min-height: 46px; }
   nav.cr.navbar ul.menu-mobile {
-    list-style: none;
     margin: 0;
+    padding: 0;
+    flex-basis: 0;
+    list-style: none;
     display: none;
     flex-direction: column;
-    -webkit-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out; }
+    -webkit-transition: flex-basis 0.3s ease-out;
+    -o-transition: flex-basis 0.3s ease-out;
+    transition: flex-basis 0.3s ease-out; }
+    nav.cr.navbar ul.menu-mobile li {
+      padding: 5px 0;
+      width: 100%;
+      position: relative;
+      min-heigth: 32px; }
   nav.cr.navbar button.toggle.menu {
     display: none;
     background: none;
@@ -1395,7 +1403,11 @@ li.searchbar.flexible {
     display: flex;
     flex-grow: 1; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 898px) {
+  .cr_sideNav_show_state {
+    display: flex !important;
+    flex-basis: 100% !important; } }
+@media screen and (max-width: 898px) {
   nav.cr.navbar {
     flex-direction: column; }
     nav.cr.navbar ul.menu {
@@ -1422,8 +1434,7 @@ li.searchbar.flexible {
       nav.cr.navbar .nav.wrapper a.brand {
         flex-grow: 2; }
     nav.cr.navbar button.toggle.menu {
-      display: flex;
-      flex-basis: 0 0 50%; } }
+      display: flex; } }
 div.cr.checkbox, div.cr.switch {
   position: relative;
   display: inline-block;

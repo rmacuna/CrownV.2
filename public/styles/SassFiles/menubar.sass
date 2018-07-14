@@ -16,6 +16,7 @@ nav.cr.navbar
 	box-shadow:  0 0 4px -2px rgba(#000,.8)
 	display: flex
 	justify-content: space-between
+	overflow: hidden 
 	a.brand
 		min-height: 46px !important
 		min-width: 132px 
@@ -55,14 +56,20 @@ nav.cr.navbar
 			min-height: 46px
 
 	ul.menu-mobile
-		list-style: none
 		margin: 0
+		padding: 0
+		flex-basis: 0
+		list-style: none
 		display: none
 		flex-direction: column
-
-		-webkit-transition: all 0.3s ease-out 
-		-o-transition: all 0.3s ease-out
-		transition: all 0.3s ease-out
+		-webkit-transition: flex-basis 0.3s ease-out 
+		-o-transition: flex-basis 0.3s ease-out
+		transition: flex-basis 0.3s ease-out
+		li 
+			padding: 5px 0 
+			width: 100%
+			position: relative
+			min-heigth: 32px
 
 	button.toggle.menu 
 		display: none 
@@ -92,7 +99,14 @@ li.searchbar.flexible
 		flex-grow: 1
 	
 
-@media screen and (max-width: 768px)
+
+@media screen and (max-width: 898px)
+	.cr_sideNav_show_state
+		display: flex !important
+		flex-basis: 100% !important
+	
+
+@media screen and (max-width: 898px)
 	nav.cr.navbar
 		flex-direction: column
 		ul.menu 
@@ -120,8 +134,6 @@ li.searchbar.flexible
 				flex-grow: 2
 		button.toggle.menu 
 			display: flex
-			flex-basis: 0 0 50%
 
 
-		
 
